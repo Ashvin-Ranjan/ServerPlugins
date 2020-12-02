@@ -1,0 +1,5 @@
+package vin.ash.generalserverpack.commands;
+
+public class GetTimeCommand {
+
+}

@@ -1,0 +1,27 @@
+name: GeneralServerPack
+main: vin.ash.generalserverpack.PluginMainManager
+author: Asra
+version: 1.0.3
+description: A simple plugin
+api-version: 1.16
+api: [4.0.0]
+
+commands:
+  hello:
+    aliases: [hi, greeting]
+    description: This is a simple command for greetings
+  home:
+    aliases: [base]
+    description: This is a command to store the home locations of the players
+  sharelocation:
+    aliases: [shareloc, sharel, sl]
+    description: Shares location with player via chat
+  gettime:
+    aliases: [gett, gt]
+    description: Gets the current time
+
+permissions:
+  hello.use:
+    permission-message: PEE PEE POO POO
+    description: for the hello command
+    default: op

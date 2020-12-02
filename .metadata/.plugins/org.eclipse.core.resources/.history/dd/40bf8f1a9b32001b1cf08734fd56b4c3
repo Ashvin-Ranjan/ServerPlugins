@@ -1,0 +1,21 @@
+package vin.ash.generalserverpack;
+
+import java.util.HashMap;
+
+import org.bukkit.entity.Player;
+import org.bukkit.plugin.java.JavaPlugin;
+
+import vin.ash.generalserverpack.commands.HelloCommand;
+import vin.ash.generalserverpack.commands.HomeCommand;
+
+public class PluginMainManager extends JavaPlugin{
+	
+	public HashMap<Player, int[]> homeData = new HashMap<Player, int[]>();
+	
+	@Override
+	public void onEnable() {
+		new HelloCommand(this);
+		new HomeCommand(this);
+	}
+	
+}

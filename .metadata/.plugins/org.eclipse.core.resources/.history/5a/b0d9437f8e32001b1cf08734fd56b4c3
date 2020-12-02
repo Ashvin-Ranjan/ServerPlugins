@@ -1,0 +1,50 @@
+package vin.ash.generalserverpack.commands;
+
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandExecutor;
+import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
+
+import vin.ash.generalserverpack.PluginMainManager;
+
+
+public class HomeCommand implements CommandExecutor{
+	
+	private PluginMainManager plugin;
+	
+	public HomeCommand(PluginMainManager pl) {
+		this.plugin = pl;
+		plugin.getCommand("home").setExecutor(this);
+	}
+	
+	@Override
+	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+		if (!(sender instanceof Player)) {
+			sender.sendMessage("This can only be used by players");
+			return true;
+		}
+		
+		Player p = (Player) sender;
+		
+		if(args.length > 0) {
+			if (args[0] == "set") {
+				int[] playerloc = {p.getLocation().getBlockX(), p.getLocation().getBlockY(), p.getLocation().getBlockZ()};
+				plugin.homeData.put(p, playerloc);
+				return true;
+			}
+			else if(args[0] != "get") {
+				p.sendMessage("Incorrect Arguments for home");
+				return true;
+			}
+		}
+		
+		if (plugin.homeData.containsKey(p)) {
+			p.sendMessage("Your home is at X: " + plugin.homeData.get(p)[0] + ", Y: " + plugin.homeData.get(p)[1] + ", Z: " + plugin.homeData.get(p)[2]);
+			return true;
+		}
+		
+		p.sendMessage("You do not have your home location set. set yours using \"/home set\"");
+		return true;
+	}
+	
+}
