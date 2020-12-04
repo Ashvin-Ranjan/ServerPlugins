@@ -11,6 +11,7 @@ public class Main extends JavaPlugin{
 	
 	@Override
 	public void onEnable() {
+		saveDefaultConfig();
 		new HomeCommand(this);
 		new ShareLocationCommand(this);
 		new GetTimeCommand(this);
