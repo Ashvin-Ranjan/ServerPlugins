@@ -1,0 +1,18 @@
+name: SkyCube
+main: vin.ash.skycube.Main
+author: Asra
+version: 1.0.0
+description: A Plugin for a small Sky Cube minigame, its like Sky Block but smaller
+api-version: 1.16
+api: [4.0.0]
+
+commands:
+  home:
+    aliases: [base]
+    description: This is a command to get the spawn location of the player
+  sharelocation:
+    aliases: [shareloc, sharel, sl]
+    description: Shares location with player via chat
+  gettime:
+    aliases: [gett, gt]
+    description: Gets the current time
