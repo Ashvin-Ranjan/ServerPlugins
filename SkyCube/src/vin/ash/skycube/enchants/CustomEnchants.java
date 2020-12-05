@@ -18,14 +18,12 @@ public class CustomEnchants {
 	}
 	
 	public static void registerEnchantment(Enchantment e) {
-		boolean registered = true;
 		try {
 			Field f = Enchantment.class.getDeclaredField("acceptingNew");
 			f.setAccessible(true);
 			f.set(null, true);
 			Enchantment.registerEnchantment(e);
 		} catch (Exception ex) {
-			registered = false;
 			ex.printStackTrace();
 		}
 	}

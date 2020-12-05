@@ -28,7 +28,7 @@ public class ItemRecipes {
 		
 		ShapedRecipe recipe = new ShapedRecipe(key, item);
 		
-		recipe.shape("SSS", "SSS", "SSS");
+		recipe.shape(" S ", "SSS", " S ");
 		
 		recipe.setIngredient('S', Material.COBBLESTONE);
 		
@@ -42,7 +42,7 @@ public class ItemRecipes {
 		
 		ShapedRecipe recipe = new ShapedRecipe(key, item);
 		
-		recipe.shape("CCC", "CCC", "CCC");
+		recipe.shape(" C ", "CCC", " C ");
 		
 		recipe.setIngredient('C', Material.COAL);
 		
@@ -56,7 +56,7 @@ public class ItemRecipes {
 		
 		ShapedRecipe recipe = new ShapedRecipe(key, item);
 		
-		recipe.shape("III", "III", "III");
+		recipe.shape(" I ", "III", " I ");
 		
 		recipe.setIngredient('I', Material.IRON_INGOT);
 		
@@ -70,7 +70,7 @@ public class ItemRecipes {
 		
 		ShapedRecipe recipe = new ShapedRecipe(key, item);
 		
-		recipe.shape("GGG", "GGG", "GGG");
+		recipe.shape(" G ", "GGG", " G ");
 		
 		recipe.setIngredient('G', Material.GOLD_INGOT);
 		
@@ -84,7 +84,7 @@ public class ItemRecipes {
 		
 		ShapedRecipe recipe = new ShapedRecipe(key, item);
 		
-		recipe.shape("RRR", "RRR", "RRR");
+		recipe.shape(" R ", "RRR", " R ");
 		
 		recipe.setIngredient('R', Material.REDSTONE);
 		
@@ -98,7 +98,7 @@ public class ItemRecipes {
 		
 		ShapedRecipe recipe = new ShapedRecipe(key, item);
 		
-		recipe.shape("LLL", "LLL", "LLL");
+		recipe.shape(" L ", "LLL", " L ");
 		
 		recipe.setIngredient('L', Material.LAPIS_LAZULI);
 		

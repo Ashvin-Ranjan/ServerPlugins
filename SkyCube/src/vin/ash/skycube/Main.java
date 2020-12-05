@@ -9,6 +9,7 @@ import vin.ash.skycube.enchants.CustomEnchants;
 import vin.ash.skycube.listeners.JoinListener;
 import vin.ash.skycube.listeners.TransmutationListener;
 import vin.ash.skycube.recipes.ItemRecipes;
+import vin.ash.skycube.recipes.TransmutationRecipes;
 import vin.ash.skycube.recipes.UtilRecipes;
 
 public class Main extends JavaPlugin{
@@ -27,6 +28,7 @@ public class Main extends JavaPlugin{
 		
 		new ItemRecipes(this);
 		new UtilRecipes(this);
+		new TransmutationRecipes(this);
 		
 		CustomEnchants.register(CustomEnchants.TRANSMUTATION);
 	}
