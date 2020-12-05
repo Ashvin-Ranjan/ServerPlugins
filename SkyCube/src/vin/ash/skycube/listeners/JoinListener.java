@@ -34,14 +34,14 @@ public class JoinListener implements Listener{
 			//TODO initialize island for player to join
 			//Find if there are any players online
 			if(plugin.getServer().getOnlinePlayers() != null) {
-				if(plugin.getServer().getOnlinePlayers().size() != 0) {
+				if(false) {
 					//If there is an online player spawn the new one within 6 chunks of their spawn
 					Location spawn = findSpawnLocation(p, plugin.getServer().getOnlinePlayers(), Utils.getAllPlayers(Bukkit.getServer()));
 					p.setBedSpawnLocation(spawn);
 					p.teleport(spawn);
 					generateIsland(spawn);
 					
-				} else if(plugin.getServer().getOfflinePlayers() != null ) {
+				} else if(false) {
 					//If there are no online players then spawn the new one within 6 chunks of a offline players spawn
 					Location spawn = findSpawnLocation(p, Utils.toOnlinePlayer(plugin.getServer().getOfflinePlayers()));
 					p.setBedSpawnLocation(spawn);
@@ -49,9 +49,9 @@ public class JoinListener implements Listener{
 					generateIsland(spawn);
 				} else {
 					//If this is the first player then spawn them at 0, 0, 0
-					p.setBedSpawnLocation(new Location(Bukkit.getServer().getWorlds().get(0), 0, 0, 65));
-					p.teleport(new Location(Bukkit.getServer().getWorlds().get(0), 0, 0, 65));
-					generateIsland(new Location(Bukkit.getServer().getWorlds().get(0), 0, 0, 65));
+					p.setBedSpawnLocation(new Location(Bukkit.getServer().getWorlds().get(0), 0, 65, 0));
+					p.teleport(new Location(Bukkit.getServer().getWorlds().get(0), 0, 65, 0));
+					generateIsland(new Location(Bukkit.getServer().getWorlds().get(0), 0, 65, 0));
 				}
 			}
 			

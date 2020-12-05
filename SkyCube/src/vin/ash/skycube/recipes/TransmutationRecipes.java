@@ -34,6 +34,7 @@ public class TransmutationRecipes {
 		List<String> lore = new ArrayList<String>();
 		lore.add(ChatColor.BLUE + "TRANSMUTATION I" + ChatColor.RESET);
 		meta.setLore(lore);
+		item.setItemMeta(meta);
 		
 		NamespacedKey key = new NamespacedKey(plugin, "stone_pickaxe");
 		
@@ -42,6 +43,7 @@ public class TransmutationRecipes {
 		recipe.shape("CCC", "CPC", "CCC");
 		
 		recipe.setIngredient('C', Material.COAL);
+		recipe.setIngredient('P', Material.STONE_PICKAXE);
 		
 		return recipe;
 	}
@@ -53,6 +55,7 @@ public class TransmutationRecipes {
 		List<String> lore = new ArrayList<String>();
 		lore.add(ChatColor.BLUE + "TRANSMUTATION II" + ChatColor.RESET);
 		meta.setLore(lore);
+		item.setItemMeta(meta);
 		
 		NamespacedKey key = new NamespacedKey(plugin, "iron_pickaxe");
 		
@@ -61,6 +64,7 @@ public class TransmutationRecipes {
 		recipe.shape("III", "IPI", "III");
 		
 		recipe.setIngredient('I', Material.IRON_INGOT);
+		recipe.setIngredient('P', Material.IRON_PICKAXE);
 		
 		return recipe;
 	}
@@ -72,6 +76,7 @@ public class TransmutationRecipes {
 		List<String> lore = new ArrayList<String>();
 		lore.add(ChatColor.BLUE + "TRANSMUTATION III" + ChatColor.RESET);
 		meta.setLore(lore);
+		item.setItemMeta(meta);
 		
 		NamespacedKey key = new NamespacedKey(plugin, "gold_pickaxe");
 		
@@ -80,6 +85,7 @@ public class TransmutationRecipes {
 		recipe.shape("III", "IPI", "III");
 		
 		recipe.setIngredient('I', Material.GOLD_INGOT);
+		recipe.setIngredient('P', Material.IRON_PICKAXE);
 		
 		return recipe;
 	}
@@ -91,6 +97,7 @@ public class TransmutationRecipes {
 		List<String> lore = new ArrayList<String>();
 		lore.add(ChatColor.BLUE + "TRANSMUTATION IV" + ChatColor.RESET);
 		meta.setLore(lore);
+		item.setItemMeta(meta);
 		
 		NamespacedKey key = new NamespacedKey(plugin, "redstone_pickaxe");
 		
@@ -99,6 +106,7 @@ public class TransmutationRecipes {
 		recipe.shape("RRR", "RPR", "RRR");
 		
 		recipe.setIngredient('R', Material.REDSTONE);
+		recipe.setIngredient('P', Material.IRON_PICKAXE);
 		
 		return recipe;
 	}
@@ -110,6 +118,7 @@ public class TransmutationRecipes {
 		List<String> lore = new ArrayList<String>();
 		lore.add(ChatColor.BLUE + "TRANSMUTATION V" + ChatColor.RESET);
 		meta.setLore(lore);
+		item.setItemMeta(meta);
 		
 		NamespacedKey key = new NamespacedKey(plugin, "lapis_pickaxe");
 		
@@ -118,6 +127,7 @@ public class TransmutationRecipes {
 		recipe.shape("LLL", "LPL", "LLL");
 		
 		recipe.setIngredient('L', Material.LAPIS_LAZULI);
+		recipe.setIngredient('P', Material.IRON_PICKAXE);
 		
 		return recipe;
 	}
@@ -129,6 +139,7 @@ public class TransmutationRecipes {
 		List<String> lore = new ArrayList<String>();
 		lore.add(ChatColor.BLUE + "TRANSMUTATION VI" + ChatColor.RESET);
 		meta.setLore(lore);
+		item.setItemMeta(meta);
 		
 		NamespacedKey key = new NamespacedKey(plugin, "diamond_pickaxe");
 		
@@ -137,6 +148,7 @@ public class TransmutationRecipes {
 		recipe.shape("DDD", "DPD", "DDD");
 		
 		recipe.setIngredient('D', Material.DIAMOND);
+		recipe.setIngredient('P', Material.DIAMOND_PICKAXE);
 		
 		return recipe;
 	}

@@ -35,8 +35,6 @@ public class TransmutationListener implements Listener{
 			return;
 		if(p.getGameMode() != GameMode.SURVIVAL)
 			return;
-		if(e.getBlock() != Material.STONE.createBlockData() || e.getBlock() != Material.COBBLESTONE.createBlockData())
-			return;
 		if(p.getInventory().getItemInMainHand().getEnchantmentLevel(CustomEnchants.TRANSMUTATION) < 1)
 		
 		e.setDropItems(false);

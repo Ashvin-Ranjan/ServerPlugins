@@ -13,7 +13,7 @@ public class UtilRecipes {
 	
 	public UtilRecipes(Main pl) {
 		this.plugin = pl;
-		Bukkit.addRecipe(this.grassRecipe());
+		//Bukkit.addRecipe(this.grassRecipe());
 	}
 	
 	public ShapelessRecipe grassRecipe() {
