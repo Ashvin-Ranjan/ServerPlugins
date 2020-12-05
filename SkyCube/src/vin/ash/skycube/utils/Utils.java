@@ -1,11 +1,11 @@
 package vin.ash.skycube.utils;
 
-import org.apache.commons.lang.ArrayUtils;
+import java.util.Calendar;
+import java.util.Random;
+
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
-import org.bukkit.OfflinePlayer;
-import org.bukkit.Server;
-import org.bukkit.entity.Player;
+import org.bukkit.World;
 
 
 public class Utils {
@@ -18,16 +18,11 @@ public class Utils {
 		return Math.sqrt(Math.pow(a.getX() - b.getX(), 2)+Math.pow(a.getZ() - b.getZ(), 2));
 	}
 	
-	public static Player[] getAllPlayers(Server s) {
-		return (Player[]) ArrayUtils.addAll(s.getOnlinePlayers().toArray(), toOnlinePlayer(s.getOfflinePlayers()));
+	public static Location getRandomLocation(World w, int spread) {
+		Random r = new Random(Calendar.getInstance().getTimeInMillis());
+		return new Location(w, r.nextDouble() * spread, 65, r.nextDouble() * spread);
 	}
+
 	
-	public static Player[] toOnlinePlayer(OfflinePlayer[] p) {
-		Player[] pl = new Player[p.length];
-		for(int i = 0; i < p.length; i++) {
-			pl[i] = p[i].getPlayer();
-		}
-		return pl;
-	}
 	
 }

@@ -2,9 +2,6 @@ package vin.ash.skycube;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
-import vin.ash.skycube.commands.GetTimeCommand;
-import vin.ash.skycube.commands.HomeCommand;
-import vin.ash.skycube.commands.ShareLocationCommand;
 import vin.ash.skycube.enchants.CustomEnchants;
 import vin.ash.skycube.listeners.JoinListener;
 import vin.ash.skycube.listeners.TransmutationListener;
@@ -18,10 +15,6 @@ public class Main extends JavaPlugin{
 	@Override
 	public void onEnable() {
 		saveDefaultConfig();
-		
-		new HomeCommand(this);
-		new ShareLocationCommand(this);
-		new GetTimeCommand(this);
 		
 		new JoinListener(this);
 		new TransmutationListener(this);
