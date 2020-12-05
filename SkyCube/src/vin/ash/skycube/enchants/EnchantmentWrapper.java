@@ -10,12 +10,14 @@ public class EnchantmentWrapper extends Enchantment{
 	private final String name;
 	private final int maxLvl;
 	private final EnchantmentTarget target;
+	private final int startLvl;
 	
 	public EnchantmentWrapper(String namespace, String name, int lvl) {
 		super(NamespacedKey.minecraft(namespace));
 		this.name = name;
 		this.maxLvl = lvl;
 		this.target = null;
+		this.startLvl = 0;
 	}
 	
 	public EnchantmentWrapper(String namespace, String name, int lvl, EnchantmentTarget target) {
@@ -23,6 +25,15 @@ public class EnchantmentWrapper extends Enchantment{
 		this.name = name;
 		this.maxLvl = lvl;
 		this.target = target;
+		this.startLvl = 0;
+	}
+	
+	public EnchantmentWrapper(String namespace, String name, int lvl, EnchantmentTarget target, int startLvl) {
+		super(NamespacedKey.minecraft(namespace));
+		this.name = name;
+		this.maxLvl = lvl;
+		this.target = target;
+		this.startLvl = startLvl;
 	}
 
 	@Override
@@ -52,7 +63,7 @@ public class EnchantmentWrapper extends Enchantment{
 
 	@Override
 	public int getStartLevel() {
-		return 0;
+		return startLvl;
 	}
 
 	@Override

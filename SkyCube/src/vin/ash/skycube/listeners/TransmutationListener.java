@@ -1,8 +1,5 @@
 package vin.ash.skycube.listeners;
 
-import java.util.Calendar;
-import java.util.Random;
-
 import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
 import org.bukkit.Material;
@@ -35,34 +32,33 @@ public class TransmutationListener implements Listener{
 			return;
 		if(p.getGameMode() != GameMode.SURVIVAL)
 			return;
-		if(p.getInventory().getItemInMainHand().getEnchantmentLevel(CustomEnchants.TRANSMUTATION) < 1)
-		
-		e.setDropItems(false);
+
 		ItemStack replacement;
-		switch (p.getInventory().getItemInMainHand().getEnchantmentLevel(CustomEnchants.TRANSMUTATION)) {
+		
+		switch (p.getInventory().getItemInMainHand().getEnchantments().get(CustomEnchants.TRANSMUTATION)) {
 			case 1:
-				replacement = new ItemStack(Material.COAL);
+				replacement = new ItemStack(Material.COAL, 1);
 				break;
 			case 2:
-				replacement = new ItemStack(Material.IRON_INGOT);
+				replacement = new ItemStack(Material.IRON_INGOT, 1);
 				break;
 			case 3:
-				replacement = new ItemStack(Material.GOLD_INGOT);
+				replacement = new ItemStack(Material.GOLD_INGOT, 1);
 				break;
 			case 4:
-				replacement = new ItemStack(Material.REDSTONE);
+				replacement = new ItemStack(Material.REDSTONE, 1);
 				break;
 			case 5:
-				replacement = new ItemStack(Material.LAPIS_LAZULI);
+				replacement = new ItemStack(Material.LAPIS_LAZULI, 1);
 				break;
 			case 6:
-				replacement = new ItemStack(Material.DIAMOND);
+				replacement = new ItemStack(Material.DIAMOND, 1);
 				break;
 			default:
-				return;
+				replacement = new ItemStack(Material.COBBLESTONE, 1);
+				break;
 		}
-		Random r = new Random(Calendar.getInstance().getTimeInMillis());
-		replacement.setAmount(r.nextInt(2) + 1);
-		e.getBlock().getLocation().getWorld().dropItemNaturally(e.getBlock().getLocation(), replacement);
+		e.getBlock().getLocation().getWorld().dropItem(e.getBlock().getLocation(), replacement);
+		e.setDropItems(false);
 	}
 }

@@ -8,7 +8,7 @@ import org.bukkit.enchantments.Enchantment;
 import org.bukkit.enchantments.EnchantmentTarget;
 
 public class CustomEnchants {
-	public static final Enchantment TRANSMUTATION = new EnchantmentWrapper("transmutation", "Transmutation", 6, EnchantmentTarget.TOOL);
+	public static final Enchantment TRANSMUTATION = new EnchantmentWrapper("transmutation", "Transmutation", 6, EnchantmentTarget.TOOL, 1);
 	
 	public static void register(Enchantment e) {
 		boolean registered = Arrays.stream(Enchantment.values()).collect(Collectors.toList()).contains(e);

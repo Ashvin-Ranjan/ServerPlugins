@@ -30,9 +30,9 @@ public class TransmutationRecipes {
 	public ShapedRecipe coalTransmutationRecipe() {
 		ItemStack item = new ItemStack(Material.STONE_PICKAXE);
 		ItemMeta meta = item.getItemMeta();
-		meta.addEnchant(CustomEnchants.TRANSMUTATION, 1, true);
+		meta.addEnchant(CustomEnchants.TRANSMUTATION, 1, false);
 		List<String> lore = new ArrayList<String>();
-		lore.add(ChatColor.BLUE + "TRANSMUTATION I" + ChatColor.RESET);
+		lore.add(ChatColor.BLUE + "Transmutation I" + ChatColor.RESET);
 		meta.setLore(lore);
 		item.setItemMeta(meta);
 		
@@ -51,9 +51,9 @@ public class TransmutationRecipes {
 	public ShapedRecipe ironTransmutationRecipe() {
 		ItemStack item = new ItemStack(Material.IRON_PICKAXE);
 		ItemMeta meta = item.getItemMeta();
-		meta.addEnchant(CustomEnchants.TRANSMUTATION, 2, true);
+		meta.addEnchant(CustomEnchants.TRANSMUTATION, 2, false);
 		List<String> lore = new ArrayList<String>();
-		lore.add(ChatColor.BLUE + "TRANSMUTATION II" + ChatColor.RESET);
+		lore.add(ChatColor.BLUE + "Transmutation II" + ChatColor.RESET);
 		meta.setLore(lore);
 		item.setItemMeta(meta);
 		
@@ -72,9 +72,9 @@ public class TransmutationRecipes {
 	public ShapedRecipe goldTransmutationRecipe() {
 		ItemStack item = new ItemStack(Material.IRON_PICKAXE);
 		ItemMeta meta = item.getItemMeta();
-		meta.addEnchant(CustomEnchants.TRANSMUTATION, 3, true);
+		meta.addEnchant(CustomEnchants.TRANSMUTATION, 3, false);
 		List<String> lore = new ArrayList<String>();
-		lore.add(ChatColor.BLUE + "TRANSMUTATION III" + ChatColor.RESET);
+		lore.add(ChatColor.BLUE + "Transmutation III" + ChatColor.RESET);
 		meta.setLore(lore);
 		item.setItemMeta(meta);
 		
@@ -93,9 +93,9 @@ public class TransmutationRecipes {
 	public ShapedRecipe redstoneTransmutationRecipe() {
 		ItemStack item = new ItemStack(Material.IRON_PICKAXE);
 		ItemMeta meta = item.getItemMeta();
-		meta.addEnchant(CustomEnchants.TRANSMUTATION, 4, true);
+		meta.addEnchant(CustomEnchants.TRANSMUTATION, 4, false);
 		List<String> lore = new ArrayList<String>();
-		lore.add(ChatColor.BLUE + "TRANSMUTATION IV" + ChatColor.RESET);
+		lore.add(ChatColor.BLUE + "Transmutation IV" + ChatColor.RESET);
 		meta.setLore(lore);
 		item.setItemMeta(meta);
 		
@@ -114,9 +114,9 @@ public class TransmutationRecipes {
 	public ShapedRecipe lapisTransmutationRecipe() {
 		ItemStack item = new ItemStack(Material.IRON_PICKAXE);
 		ItemMeta meta = item.getItemMeta();
-		meta.addEnchant(CustomEnchants.TRANSMUTATION, 5, true);
+		meta.addEnchant(CustomEnchants.TRANSMUTATION, 5, false);
 		List<String> lore = new ArrayList<String>();
-		lore.add(ChatColor.BLUE + "TRANSMUTATION V" + ChatColor.RESET);
+		lore.add(ChatColor.BLUE + "Transmutation V" + ChatColor.RESET);
 		meta.setLore(lore);
 		item.setItemMeta(meta);
 		
@@ -135,9 +135,9 @@ public class TransmutationRecipes {
 	public ShapedRecipe diamondTransmutationRecipe() {
 		ItemStack item = new ItemStack(Material.DIAMOND_PICKAXE);
 		ItemMeta meta = item.getItemMeta();
-		meta.addEnchant(CustomEnchants.TRANSMUTATION, 6, true);
+		meta.addEnchant(CustomEnchants.TRANSMUTATION, 6, false);
 		List<String> lore = new ArrayList<String>();
-		lore.add(ChatColor.BLUE + "TRANSMUTATION VI" + ChatColor.RESET);
+		lore.add(ChatColor.BLUE + "Transmutation VI" + ChatColor.RESET);
 		meta.setLore(lore);
 		item.setItemMeta(meta);
 		
