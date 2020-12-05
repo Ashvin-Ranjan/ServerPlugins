@@ -34,14 +34,14 @@ public class JoinListener implements Listener{
 			//TODO initialize island for player to join
 			//Find if there are any players online
 			if(plugin.getServer().getOnlinePlayers() != null) {
-				if(false) {
+				if(plugin.getServer().getOnlinePlayers().size() > 1) {
 					//If there is an online player spawn the new one within 6 chunks of their spawn
 					Location spawn = findSpawnLocation(p, plugin.getServer().getOnlinePlayers(), Utils.getAllPlayers(Bukkit.getServer()));
 					p.setBedSpawnLocation(spawn);
 					p.teleport(spawn);
 					generateIsland(spawn);
 					
-				} else if(false) {
+				} else if(plugin.getServer().getOfflinePlayers().length > 1) {
 					//If there are no online players then spawn the new one within 6 chunks of a offline players spawn
 					Location spawn = findSpawnLocation(p, Utils.toOnlinePlayer(plugin.getServer().getOfflinePlayers()));
 					p.setBedSpawnLocation(spawn);
@@ -68,6 +68,10 @@ public class JoinListener implements Listener{
 		int x = playerloc.getBlockX();
 		int y = playerloc.getBlockY();
 		int z = playerloc.getBlockZ();
+		
+		//Adding air
+		w.getBlockAt(x, y, z).setBlockData(Material.AIR.createBlockData());
+		w.getBlockAt(x, y+1, z).setBlockData(Material.AIR.createBlockData());
 		//the top layer is logs
 		w.getBlockAt(x, y-1, z).setBlockData(Material.OAK_LOG.createBlockData());
 		w.getBlockAt(x-1, y-1, z).setBlockData(Material.OAK_LOG.createBlockData());

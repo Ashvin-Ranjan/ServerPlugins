@@ -58,7 +58,7 @@ public class TransmutationListener implements Listener{
 				replacement = new ItemStack(Material.COBBLESTONE, 1);
 				break;
 		}
-		e.getBlock().getLocation().getWorld().dropItem(e.getBlock().getLocation(), replacement);
+		e.getBlock().getLocation().getWorld().dropItemNaturally(e.getBlock().getLocation(), replacement);
 		e.setDropItems(false);
 	}
 }
