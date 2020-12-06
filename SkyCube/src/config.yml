@@ -6,3 +6,4 @@ messageTutorial_start: '&oWelcome to your island, this is where you will live fo
 spawn_spread: 500
 
 unbreakable_file: 'unbreakable'
+spawn_file: 'spawn'

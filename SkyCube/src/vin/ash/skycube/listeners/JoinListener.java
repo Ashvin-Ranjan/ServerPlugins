@@ -1,6 +1,7 @@
 package vin.ash.skycube.listeners;
 
 import java.io.File;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
@@ -12,6 +13,8 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 
 import vin.ash.skycube.Main;
 import vin.ash.skycube.utils.Utils;
@@ -26,6 +29,7 @@ public class JoinListener implements Listener{
 		Bukkit.getPluginManager().registerEvents(this, plugin);
 	}
 	
+	@SuppressWarnings("unchecked")
 	@EventHandler
 	public void onJoin(PlayerJoinEvent e) {
 		Player p = e.getPlayer();
@@ -39,6 +43,32 @@ public class JoinListener implements Listener{
 					p.setBedSpawnLocation(spawn);
 					p.teleport(spawn);
 					generateIsland(spawn);
+					File file = new File(plugin.getDataFolder(), plugin.getConfig().getString("spawn_file") + ".json");
+					JSONObject playerspawn = new JSONObject();
+					if(!file.exists()) {
+						try {
+				            file.createNewFile();
+				        } catch (IOException es) {
+				            es.printStackTrace();
+				        }
+					} else {
+						JSONParser parser = new JSONParser();
+						try {
+							playerspawn = (JSONObject) parser.parse(new FileReader(file));
+						} catch (Exception ex) {
+							ex.printStackTrace();
+						}
+					}
+					
+					playerspawn.put(p.getUniqueId().toString(), spawn.getBlockX() + " " + spawn.getBlockY() + " " + spawn.getBlockZ());
+					
+					try {
+						FileWriter writer = new FileWriter(file);
+						writer.write(playerspawn.toJSONString());
+						writer.close();
+					} catch (IOException ex) {
+						ex.printStackTrace();
+					}
 					
 				} else {
 					//If this is the first player then spawn them at 0, 65, 0
@@ -100,6 +130,7 @@ public class JoinListener implements Listener{
 		w.getBlockAt(x, y-3, z+1).setBlockData(Material.COBBLESTONE.createBlockData());
 		//Made blocks unbreakable
 		File file = new File(plugin.getDataFolder(), plugin.getConfig().getString("unbreakable_file") + ".txt");
+		boolean creatednew = !file.exists();
 	    if(!file.exists()){
 	        try {
 	            file.createNewFile();
@@ -109,9 +140,10 @@ public class JoinListener implements Listener{
 	    }
 	    
 	    try {
-	        FileWriter writer = new FileWriter(file);
+	        FileWriter writer = new FileWriter(file, true);
 	        int[][] lis = {{x, y-3, z+1} , {x, y-3, z}, {x-1, y-3, z}, {x+1, y-3, z}, {x-1, y-3, z-1}, {x-1, y-3, z+1}, {x+1, y-3, z-1}, {x+1, y-3, z+1}, {x, y-3, z-1}};
-	        
+	        if(!creatednew)
+	        	writer.write("|");
 	        for(int i = 0; i < lis.length; i++) {
 	        	for(int j = 0; j < lis[i].length; j++) {
 	        		if(j == lis[i].length - 1)
