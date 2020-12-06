@@ -8,15 +8,16 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.metadata.FixedMetadataValue;
 
 import vin.ash.skycube.Main;
 import vin.ash.skycube.utils.Utils;
 
-public class JoinListener implements Listener{
+public class FirstJoinListener implements Listener{
 	
 	private Main plugin;
 	
-	public JoinListener(Main pl) {
+	public FirstJoinListener(Main pl) {
 		this.plugin = pl;
 		
 		Bukkit.getPluginManager().registerEvents(this, plugin);
@@ -59,6 +60,9 @@ public class JoinListener implements Listener{
 		int y = playerloc.getBlockY();
 		int z = playerloc.getBlockZ();
 		
+		
+		
+		
 		//Adding air
 		w.getBlockAt(x, y, z).setBlockData(Material.AIR.createBlockData());
 		w.getBlockAt(x, y+1, z).setBlockData(Material.AIR.createBlockData());
@@ -83,15 +87,25 @@ public class JoinListener implements Listener{
 		w.getBlockAt(x, y-2, z-1).setBlockData(Material.GRASS_BLOCK.createBlockData());
 		w.getBlockAt(x, y-2, z+1).setBlockData(Material.GRASS_BLOCK.createBlockData());
 		//stone, water, and lava
-		w.getBlockAt(x, y-3, z).setBlockData(Material.STONE.createBlockData());
-		w.getBlockAt(x-1, y-3, z).setBlockData(Material.WATER.createBlockData());
-		w.getBlockAt(x+1, y-3, z).setBlockData(Material.LAVA.createBlockData());
-		w.getBlockAt(x-1, y-3, z-1).setBlockData(Material.WATER.createBlockData());
-		w.getBlockAt(x-1, y-3, z+1).setBlockData(Material.WATER.createBlockData());
-		w.getBlockAt(x+1, y-3, z-1).setBlockData(Material.LAVA.createBlockData());
-		w.getBlockAt(x+1, y-3, z+1).setBlockData(Material.LAVA.createBlockData());
-		w.getBlockAt(x, y-3, z-1).setBlockData(Material.STONE.createBlockData());
-		w.getBlockAt(x, y-3, z+1).setBlockData(Material.STONE.createBlockData());
+		w.getBlockAt(x, y-3, z).setBlockData(Material.COBBLESTONE.createBlockData());
+		w.getBlockAt(x-1, y-3, z).setBlockData(Material.COBBLESTONE.createBlockData());
+		w.getBlockAt(x+1, y-3, z).setBlockData(Material.COBBLESTONE.createBlockData());
+		w.getBlockAt(x-1, y-3, z-1).setBlockData(Material.COBBLESTONE.createBlockData());
+		w.getBlockAt(x-1, y-3, z+1).setBlockData(Material.COBBLESTONE.createBlockData());
+		w.getBlockAt(x+1, y-3, z-1).setBlockData(Material.COBBLESTONE.createBlockData());
+		w.getBlockAt(x+1, y-3, z+1).setBlockData(Material.COBBLESTONE.createBlockData());
+		w.getBlockAt(x, y-3, z-1).setBlockData(Material.COBBLESTONE.createBlockData());
+		w.getBlockAt(x, y-3, z+1).setBlockData(Material.COBBLESTONE.createBlockData());
+		//Made blocks unbreakable
+		w.getBlockAt(x, y-3, z).setMetadata("Unbreakable", new FixedMetadataValue(plugin, true));
+		w.getBlockAt(x-1, y-3, z).setMetadata("Unbreakable", new FixedMetadataValue(plugin, true));
+		w.getBlockAt(x+1, y-3, z).setMetadata("Unbreakable", new FixedMetadataValue(plugin, true));
+		w.getBlockAt(x-1, y-3, z-1).setMetadata("Unbreakable", new FixedMetadataValue(plugin, true));
+		w.getBlockAt(x-1, y-3, z+1).setMetadata("Unbreakable", new FixedMetadataValue(plugin, true));
+		w.getBlockAt(x+1, y-3, z-1).setMetadata("Unbreakable", new FixedMetadataValue(plugin, true));
+		w.getBlockAt(x+1, y-3, z+1).setMetadata("Unbreakable", new FixedMetadataValue(plugin, true));
+		w.getBlockAt(x, y-3, z-1).setMetadata("Unbreakable", new FixedMetadataValue(plugin, true));
+		w.getBlockAt(x, y-3, z+1).setMetadata("Unbreakable", new FixedMetadataValue(plugin, true));
 	}
 	
 	

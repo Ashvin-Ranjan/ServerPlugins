@@ -3,7 +3,7 @@ package vin.ash.skycube;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import vin.ash.skycube.enchants.CustomEnchants;
-import vin.ash.skycube.listeners.JoinListener;
+import vin.ash.skycube.listeners.FirstJoinListener;
 import vin.ash.skycube.listeners.TransmutationListener;
 import vin.ash.skycube.recipes.ItemRecipes;
 import vin.ash.skycube.recipes.TransmutationRecipes;
@@ -16,7 +16,7 @@ public class Main extends JavaPlugin{
 	public void onEnable() {
 		saveDefaultConfig();
 		
-		new JoinListener(this);
+		new FirstJoinListener(this);
 		new TransmutationListener(this);
 		
 		new ItemRecipes(this);
