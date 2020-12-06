@@ -4,3 +4,5 @@ messageJoin_default: '&e<player> &7 has joined the server.'
 messageTutorial_start: '&oWelcome to your island, this is where you will live for a long time so get comfy, feel free to head over to other playsers islands, everything here is fair game!'
 
 spawn_spread: 500
+
+unbreakable_file: 'unbreakable'

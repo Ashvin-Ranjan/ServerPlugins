@@ -1,5 +1,9 @@
 package vin.ash.skycube.listeners;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -8,16 +12,15 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
-import org.bukkit.metadata.FixedMetadataValue;
 
 import vin.ash.skycube.Main;
 import vin.ash.skycube.utils.Utils;
 
-public class FirstJoinListener implements Listener{
+public class JoinListener implements Listener{
 	
 	private Main plugin;
 	
-	public FirstJoinListener(Main pl) {
+	public JoinListener(Main pl) {
 		this.plugin = pl;
 		
 		Bukkit.getPluginManager().registerEvents(this, plugin);
@@ -28,7 +31,6 @@ public class FirstJoinListener implements Listener{
 		Player p = e.getPlayer();
 		
 		if (!p.hasPlayedBefore()) {
-			//TODO initialize island for player to join
 			//Find if there are any players online
 			if(plugin.getServer().getOnlinePlayers() != null) {
 				if(plugin.getServer().getOnlinePlayers().size() > 1 || plugin.getServer().getOfflinePlayers().length > 1) {
@@ -97,15 +99,35 @@ public class FirstJoinListener implements Listener{
 		w.getBlockAt(x, y-3, z-1).setBlockData(Material.COBBLESTONE.createBlockData());
 		w.getBlockAt(x, y-3, z+1).setBlockData(Material.COBBLESTONE.createBlockData());
 		//Made blocks unbreakable
-		w.getBlockAt(x, y-3, z).setMetadata("Unbreakable", new FixedMetadataValue(plugin, true));
-		w.getBlockAt(x-1, y-3, z).setMetadata("Unbreakable", new FixedMetadataValue(plugin, true));
-		w.getBlockAt(x+1, y-3, z).setMetadata("Unbreakable", new FixedMetadataValue(plugin, true));
-		w.getBlockAt(x-1, y-3, z-1).setMetadata("Unbreakable", new FixedMetadataValue(plugin, true));
-		w.getBlockAt(x-1, y-3, z+1).setMetadata("Unbreakable", new FixedMetadataValue(plugin, true));
-		w.getBlockAt(x+1, y-3, z-1).setMetadata("Unbreakable", new FixedMetadataValue(plugin, true));
-		w.getBlockAt(x+1, y-3, z+1).setMetadata("Unbreakable", new FixedMetadataValue(plugin, true));
-		w.getBlockAt(x, y-3, z-1).setMetadata("Unbreakable", new FixedMetadataValue(plugin, true));
-		w.getBlockAt(x, y-3, z+1).setMetadata("Unbreakable", new FixedMetadataValue(plugin, true));
+		File file = new File(plugin.getDataFolder(), plugin.getConfig().getString("unbreakable_file") + ".txt");
+	    if(!file.exists()){
+	        try {
+	            file.createNewFile();
+	        } catch (IOException e) {
+	            e.printStackTrace();
+	        }
+	    }
+	    
+	    try {
+	        FileWriter writer = new FileWriter(file);
+	        int[][] lis = {{x, y-3, z+1} , {x, y-3, z}, {x-1, y-3, z}, {x+1, y-3, z}, {x-1, y-3, z-1}, {x-1, y-3, z+1}, {x+1, y-3, z-1}, {x+1, y-3, z+1}, {x, y-3, z-1}};
+	        
+	        for(int i = 0; i < lis.length; i++) {
+	        	for(int j = 0; j < lis[i].length; j++) {
+	        		if(j == lis[i].length - 1)
+	        			writer.write(Integer.toString(lis[i][j]));
+	        		else
+	        			writer.write(lis[i][j] + " ");
+	        	}
+	        	if(i != lis.length)
+	        		writer.write("|");
+	        }
+	        writer.close();
+	        System.out.println("Successfully wrote to the file.");
+	      } catch (IOException e) {
+	        System.out.println("An error occurred.");
+	        e.printStackTrace();
+	      }
 	}
 	
 	

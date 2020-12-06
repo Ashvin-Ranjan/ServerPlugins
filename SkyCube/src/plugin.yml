@@ -1,7 +1,7 @@
 name: SkyCube
 main: vin.ash.skycube.Main
 author: Asra
-version: 1.1.0
+version: 1.1.3
 description: A Plugin for a small Sky Cube minigame, its like Sky Block but smaller
 api-version: 1.16
 api: [4.0.0]
