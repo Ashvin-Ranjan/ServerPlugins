@@ -83,9 +83,6 @@ public class BlockBreakListener implements Listener{
 	        String[] coords = out.split("\\|");
 	        String blockloc = e.getBlock().getLocation().getBlockX() + " " + e.getBlock().getLocation().getBlockY() + " " + e.getBlock().getLocation().getBlockZ();
 	        for(String c : coords) {
-	        	System.out.println(c);
-	        	System.out.println(blockloc);
-	        	System.out.println(c.compareTo(blockloc));
 	        	if(c.compareTo(blockloc) == 0) {
 	        		e.setCancelled(true);
 	        		if(p.getInventory().getItemInMainHand() == null || !p.getInventory().getItemInMainHand().hasItemMeta() || !p.getInventory().getItemInMainHand().getItemMeta().hasEnchant(CustomEnchants.TRANSMUTATION) || p.getGameMode() != GameMode.SURVIVAL) 

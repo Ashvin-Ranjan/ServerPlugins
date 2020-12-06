@@ -29,7 +29,6 @@ public class JoinListener implements Listener{
 		Bukkit.getPluginManager().registerEvents(this, plugin);
 	}
 	
-	@SuppressWarnings("unchecked")
 	@EventHandler
 	public void onJoin(PlayerJoinEvent e) {
 		Player p = e.getPlayer();
@@ -43,38 +42,15 @@ public class JoinListener implements Listener{
 					p.setBedSpawnLocation(spawn);
 					p.teleport(spawn);
 					generateIsland(spawn);
-					File file = new File(plugin.getDataFolder(), plugin.getConfig().getString("spawn_file") + ".json");
-					JSONObject playerspawn = new JSONObject();
-					if(!file.exists()) {
-						try {
-				            file.createNewFile();
-				        } catch (IOException es) {
-				            es.printStackTrace();
-				        }
-					} else {
-						JSONParser parser = new JSONParser();
-						try {
-							playerspawn = (JSONObject) parser.parse(new FileReader(file));
-						} catch (Exception ex) {
-							ex.printStackTrace();
-						}
-					}
-					
-					playerspawn.put(p.getUniqueId().toString(), spawn.getBlockX() + " " + spawn.getBlockY() + " " + spawn.getBlockZ());
-					
-					try {
-						FileWriter writer = new FileWriter(file);
-						writer.write(playerspawn.toJSONString());
-						writer.close();
-					} catch (IOException ex) {
-						ex.printStackTrace();
-					}
+					registerSpawn(spawn, p);
 					
 				} else {
 					//If this is the first player then spawn them at 0, 65, 0
-					p.setBedSpawnLocation(new Location(Bukkit.getServer().getWorlds().get(0), 0, 65, 0));
-					p.teleport(new Location(Bukkit.getServer().getWorlds().get(0), 0, 65, 0));
-					generateIsland(new Location(Bukkit.getServer().getWorlds().get(0), 0, 65, 0));
+					Location spawn = new Location(Bukkit.getServer().getWorlds().get(0), 0, 65, 0);
+					p.setBedSpawnLocation(spawn);
+					p.teleport(spawn);
+					generateIsland(spawn);
+					registerSpawn(spawn, p);
 				}
 			}
 			
@@ -160,6 +136,36 @@ public class JoinListener implements Listener{
 	        System.out.println("An error occurred.");
 	        e.printStackTrace();
 	      }
+	}
+	
+	@SuppressWarnings("unchecked")
+	private void registerSpawn(Location spawn, Player p) {
+		File file = new File(plugin.getDataFolder(), plugin.getConfig().getString("spawn_file") + ".json");
+		JSONObject playerspawn = new JSONObject();
+		if(!file.exists()) {
+			try {
+	            file.createNewFile();
+	        } catch (IOException es) {
+	            es.printStackTrace();
+	        }
+		} else {
+			JSONParser parser = new JSONParser();
+			try {
+				playerspawn = (JSONObject) parser.parse(new FileReader(file));
+			} catch (Exception ex) {
+				ex.printStackTrace();
+			}
+		}
+		
+		playerspawn.put(p.getUniqueId().toString(), spawn.getBlockX() + " " + spawn.getBlockY() + " " + spawn.getBlockZ());
+		
+		try {
+			FileWriter writer = new FileWriter(file);
+			writer.write(playerspawn.toJSONString());
+			writer.close();
+		} catch (IOException ex) {
+			ex.printStackTrace();
+		}
 	}
 	
 	

@@ -16,10 +16,10 @@ public class Main extends JavaPlugin{
 	@Override
 	public void onEnable() {
 		saveDefaultConfig();
-		
+
+		new PlayerRespawnListener(this);
 		new JoinListener(this);
 		new BlockBreakListener(this);
-		new PlayerRespawnListener(this);
 		
 		new ItemRecipes(this);
 		new UtilRecipes(this);

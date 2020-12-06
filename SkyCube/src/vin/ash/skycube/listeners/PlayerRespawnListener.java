@@ -41,7 +41,6 @@ public class PlayerRespawnListener implements Listener{
 		}
 		String spawn = (String) playerspawn.get(p.getUniqueId().toString());
 		String[] coords = spawn.split(" ");
-		p.teleport(new Location(p.getWorld(), Integer.parseInt(coords[0]), Integer.parseInt(coords[1]), Integer.parseInt(coords[2])));
-		
+		e.setRespawnLocation(new Location(p.getWorld(), Integer.parseInt(coords[0]), Integer.parseInt(coords[1]), Integer.parseInt(coords[2])));
 	}
 }
