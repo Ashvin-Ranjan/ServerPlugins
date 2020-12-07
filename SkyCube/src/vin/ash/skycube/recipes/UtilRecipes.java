@@ -44,7 +44,26 @@ public class UtilRecipes {
 		
 		Bukkit.addRecipe(waterBucketRecipe());
 
-		Bukkit.addRecipe(obsidianRecipe());
+		Utils.registerXRecipe(Material.OBSIDIAN, Material.DIAMOND, Material.COBBLESTONE, pl);
+		
+		Bukkit.addRecipe(mushroomRecipe(Material.RED_MUSHROOM, Material.RED_MUSHROOM_BLOCK));
+		Bukkit.addRecipe(mushroomRecipe(Material.BROWN_MUSHROOM, Material.BROWN_MUSHROOM_BLOCK));
+		Utils.registerSimpleRecipe(Material.MUSHROOM_STEM, Material.RED_MUSHROOM_BLOCK, Material.WHITE_DYE, pl);
+		Utils.registerSimpleRecipe(Material.MUSHROOM_STEM, Material.BROWN_MUSHROOM_BLOCK, Material.WHITE_DYE, pl);
+	}
+	
+	public ShapedRecipe mushroomRecipe(Material mushroom, Material block) {
+		ItemStack item = new ItemStack(block);
+		
+		NamespacedKey key = new NamespacedKey(plugin, block.name());
+		
+		ShapedRecipe recipe = new ShapedRecipe(key, item);
+		
+		recipe.shape("MM", "MM");
+		
+		recipe.setIngredient('M', mushroom);
+		
+		return recipe;
 	}
 	
 	public ShapedRecipe vineRecipe(Material leaf) {
@@ -72,21 +91,6 @@ public class UtilRecipes {
 		
 		recipe.setIngredient('I', Material.IRON_INGOT);
 		recipe.setIngredient('L', Material.LAPIS_BLOCK);
-		
-		return recipe;
-	}
-	
-	public ShapedRecipe obsidianRecipe() {
-		ItemStack item = new ItemStack(Material.OBSIDIAN);
-		
-		NamespacedKey key = new NamespacedKey(plugin, "obsidian");
-		
-		ShapedRecipe recipe = new ShapedRecipe(key, item);
-		
-		recipe.shape("DCD", "CDC", "DCD");
-		
-		recipe.setIngredient('D', Material.DIAMOND);
-		recipe.setIngredient('C', Material.COBBLESTONE);
 		
 		return recipe;
 	}

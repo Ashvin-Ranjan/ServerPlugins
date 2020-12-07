@@ -89,4 +89,19 @@ public class Utils {
 		Bukkit.addRecipe(recipe);
 	}
 	
+	public static void registerXRecipe(Material out, Material in, Material in2, Main plugin) {
+		ItemStack item = new ItemStack(out, 1);
+		
+		NamespacedKey key = new NamespacedKey(plugin, out.name());
+		
+		ShapedRecipe recipe = new ShapedRecipe(key, item);
+		
+		recipe.shape("IXI", "XIX", "IXI");
+		
+		recipe.setIngredient('I', in);
+		recipe.setIngredient('X', in2);
+		
+		Bukkit.addRecipe(recipe);
+	}
+	
 }

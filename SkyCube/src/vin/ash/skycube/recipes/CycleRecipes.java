@@ -15,7 +15,9 @@ public class CycleRecipes {
 		Material.POTATO,
 		Material.CARROT,
 		Material.SUGAR_CANE,
-		Material.BAMBOO
+		Material.BAMBOO,
+		Material.RED_MUSHROOM,
+		Material.BROWN_MUSHROOM
 	};
 	final Material[] saplingCycle = {
 		Material.ACACIA_SAPLING,
