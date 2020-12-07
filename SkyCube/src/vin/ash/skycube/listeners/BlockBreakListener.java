@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
+import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -86,7 +87,7 @@ public class BlockBreakListener implements Listener{
 	        	if(c.compareTo(blockloc) == 0) {
 	        		e.setCancelled(true);
 	        		if(p.getInventory().getItemInMainHand() == null || !p.getInventory().getItemInMainHand().hasItemMeta() || !p.getInventory().getItemInMainHand().getItemMeta().hasEnchant(CustomEnchants.TRANSMUTATION) || p.getGameMode() != GameMode.SURVIVAL) 
-	        			e.getBlock().getLocation().getWorld().dropItemNaturally(e.getBlock().getLocation(), new ItemStack(Material.COBBLESTONE, 1));
+	        			e.getBlock().getLocation().getWorld().dropItemNaturally(e.getBlock().getLocation().add(new Location(e.getBlock().getWorld(), 0, 1, 0)), new ItemStack(Material.COBBLESTONE, 1));
 	        		return;
 	        	}
 	        }

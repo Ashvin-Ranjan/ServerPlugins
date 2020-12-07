@@ -1,7 +1,0 @@
-name: GeneralServerPack
-version: 1.0
-author: Asra
-main: vin.ash.generalserverpack.PluginMainManager
-description: A simple plugin
-
-commands

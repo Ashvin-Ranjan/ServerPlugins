@@ -1,9 +1,0 @@
-package vin.ash.generalserverpack.commands;
-
-import org.bukkit.command.CommandExecutor;
-
-public class HelloCommand implements CommandExecutor{
-	
-	
-	
-}
