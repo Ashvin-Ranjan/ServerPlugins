@@ -39,7 +39,7 @@ public class SpawnEggRecipes {
 		
 		recipe.shape("EEE", "EPE", "EEE");
 		
-		recipe.setIngredient('C', Material.EMERALD);
+		recipe.setIngredient('E', Material.EMERALD);
 		recipe.setIngredient('P', Material.PLAYER_HEAD);
 		
 		return recipe;
