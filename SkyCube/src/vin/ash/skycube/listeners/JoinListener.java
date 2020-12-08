@@ -127,7 +127,7 @@ public class JoinListener implements Listener{
 	        		else
 	        			writer.write(lis[i][j] + " ");
 	        	}
-	        	if(i != lis.length)
+	        	if(i != lis.length - 1)
 	        		writer.write("|");
 	        }
 	        writer.close();

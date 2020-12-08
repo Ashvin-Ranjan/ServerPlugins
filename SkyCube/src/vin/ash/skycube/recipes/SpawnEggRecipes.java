@@ -1,6 +1,10 @@
 package vin.ash.skycube.recipes;
 
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
+import org.bukkit.NamespacedKey;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.ShapedRecipe;
 
 import vin.ash.skycube.Main;
 import vin.ash.skycube.utils.Utils;
@@ -22,5 +26,24 @@ public class SpawnEggRecipes {
 		Utils.registerXRecipe(Material.HOGLIN_SPAWN_EGG, Material.PORKCHOP, Material.GOLD_INGOT, pl);
 		Utils.registerXRecipe(Material.BLAZE_SPAWN_EGG, Material.FIRE_CHARGE, Material.GOLD_INGOT, pl);
 		Utils.registerXRecipe(Material.WITHER_SKELETON_SPAWN_EGG, Material.BONE, Material.COAL, pl);
+		
+		Bukkit.addRecipe(villagerRecipe());
+	}
+	
+	public ShapedRecipe villagerRecipe() {
+		ItemStack item = new ItemStack(Material.VILLAGER_SPAWN_EGG);
+		
+		NamespacedKey key = new NamespacedKey(plugin, "villager_spawn_egg");
+		
+		ShapedRecipe recipe = new ShapedRecipe(key, item);
+		
+		recipe.shape("EEE", "EPE", "EEE");
+		
+		recipe.setIngredient('C', Material.EMERALD);
+		recipe.setIngredient('P', Material.PLAYER_HEAD);
+		
+		return recipe;
 	}
 }
+
+
