@@ -36,6 +36,8 @@ public class BlockBreakListener implements Listener{
 			return;
 		if(p.getGameMode() != GameMode.SURVIVAL)
 			return;
+		if(e.getBlock().getType() != Material.COBBLESTONE)
+			return;
 
 		ItemStack replacement;
 		

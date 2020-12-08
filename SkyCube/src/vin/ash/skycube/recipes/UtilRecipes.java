@@ -43,6 +43,8 @@ public class UtilRecipes {
 		Bukkit.addRecipe(saplingRecipe());
 		
 		Bukkit.addRecipe(waterBucketRecipe());
+		
+		Bukkit.addRecipe(boneRecipe());
 
 		Utils.registerXRecipe(Material.OBSIDIAN, Material.DIAMOND, Material.COBBLESTONE, pl);
 		
@@ -50,12 +52,22 @@ public class UtilRecipes {
 		Bukkit.addRecipe(mushroomRecipe(Material.BROWN_MUSHROOM, Material.BROWN_MUSHROOM_BLOCK));
 		Utils.registerSimpleRecipe(Material.MUSHROOM_STEM, Material.RED_MUSHROOM_BLOCK, Material.WHITE_DYE, pl);
 		Utils.registerSimpleRecipe(Material.MUSHROOM_STEM, Material.BROWN_MUSHROOM_BLOCK, Material.WHITE_DYE, pl);
+		
+		
 	}
 	
 	public ShapedRecipe mushroomRecipe(Material mushroom, Material block) {
 		ItemStack item = new ItemStack(block);
 		
 		NamespacedKey key = new NamespacedKey(plugin, block.name());
+		int index = 0;
+		do {
+			if(index == 0)
+				key = new NamespacedKey(plugin, block.name());
+			else
+				key = new NamespacedKey(plugin, block.name() + index);
+			index++;
+		} while (Bukkit.getRecipe(key) != null);
 		
 		ShapedRecipe recipe = new ShapedRecipe(key, item);
 		
@@ -70,6 +82,14 @@ public class UtilRecipes {
 		ItemStack item = new ItemStack(Material.VINE);
 		
 		NamespacedKey key = new NamespacedKey(plugin, "vine");
+		int index = 0;
+		do {
+			if(index == 0)
+				key = new NamespacedKey(plugin, "vine");
+			else
+				key = new NamespacedKey(plugin, "vine" + index);
+			index++;
+		} while (Bukkit.getRecipe(key) != null);
 		
 		ShapedRecipe recipe = new ShapedRecipe(key, item);
 		
@@ -105,6 +125,20 @@ public class UtilRecipes {
 		recipe.shape("S", "S");
 		
 		recipe.setIngredient('S', Material.WHEAT_SEEDS);
+		
+		return recipe;
+	}
+	
+	public ShapedRecipe boneRecipe() {
+		ItemStack item = new ItemStack(Material.OAK_SAPLING);
+		
+		NamespacedKey key = new NamespacedKey(plugin, "bone");
+		
+		ShapedRecipe recipe = new ShapedRecipe(key, item);
+		
+		recipe.shape("BBB");
+		
+		recipe.setIngredient('B', Material.BONE_MEAL);
 		
 		return recipe;
 	}

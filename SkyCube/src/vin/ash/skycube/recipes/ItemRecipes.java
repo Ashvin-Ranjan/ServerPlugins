@@ -104,4 +104,18 @@ public class ItemRecipes {
 		
 		return recipe;
 	}
+	
+	public ShapedRecipe emeraldRecipe() {
+		ItemStack item = new ItemStack(Material.EMERALD);
+		
+		NamespacedKey key = new NamespacedKey(plugin, "emerald");
+		
+		ShapedRecipe recipe = new ShapedRecipe(key, item);
+		
+		recipe.shape(" D ", "DDD", " D ");
+		
+		recipe.setIngredient('D', Material.DIAMOND);
+		
+		return recipe;
+	}
 }

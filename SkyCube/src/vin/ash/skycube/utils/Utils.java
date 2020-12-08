@@ -33,6 +33,14 @@ public class Utils {
 	
 	public static void registerSimpleRecipe(ItemStack out, Material in, Main plugin) {
 		NamespacedKey key = new NamespacedKey(plugin, out.getType().name());
+		int index = 0;
+		do {
+			if(index == 0)
+				key = new NamespacedKey(plugin, out.getType().name());
+			else
+				key = new NamespacedKey(plugin, out.getType().name() + index);
+			index++;
+		} while (Bukkit.getRecipe(key) != null);
 		
 		ShapelessRecipe recipe = new ShapelessRecipe(key, out);
 		
@@ -45,6 +53,14 @@ public class Utils {
 		ItemStack item = new ItemStack(out, 1);
 		
 		NamespacedKey key = new NamespacedKey(plugin, out.name());
+		int index = 0;
+		do {
+			if(index == 0)
+				key = new NamespacedKey(plugin, out.name());
+			else
+				key = new NamespacedKey(plugin, out.name() + index);
+			index++;
+		} while (Bukkit.getRecipe(key) != null);
 		
 		ShapelessRecipe recipe = new ShapelessRecipe(key, item);
 		
@@ -57,6 +73,14 @@ public class Utils {
 		ItemStack item = new ItemStack(out, 1);
 		
 		NamespacedKey key = new NamespacedKey(plugin, out.name());
+		int index = 0;
+		do {
+			if(index == 0)
+				key = new NamespacedKey(plugin, out.name());
+			else
+				key = new NamespacedKey(plugin, out.name() + index);
+			index++;
+		} while (Bukkit.getRecipe(key) != null);
 		
 		ShapelessRecipe recipe = new ShapelessRecipe(key, item);
 		
@@ -69,7 +93,7 @@ public class Utils {
 	public static void registerRecipeCycle(Material[] items, Main plugin) {
 		for(int i = 0; i < items.length; i++) {
 			if(i == items.length - 1) 
-				Utils.registerSimpleRecipe(items[0], items[0], plugin);
+				Utils.registerSimpleRecipe(items[0], items[i], plugin);
 			else 
 				Utils.registerSimpleRecipe(items[i + 1], items[i], plugin);
 		}
@@ -79,6 +103,14 @@ public class Utils {
 		ItemStack item = new ItemStack(out, 1);
 		
 		NamespacedKey key = new NamespacedKey(plugin, out.name());
+		int index = 0;
+		do {
+			if(index == 0)
+				key = new NamespacedKey(plugin, out.name());
+			else
+				key = new NamespacedKey(plugin, out.name() + index);
+			index++;
+		} while (Bukkit.getRecipe(key) != null);
 		
 		ShapedRecipe recipe = new ShapedRecipe(key, item);
 		
@@ -93,6 +125,14 @@ public class Utils {
 		ItemStack item = new ItemStack(out, 1);
 		
 		NamespacedKey key = new NamespacedKey(plugin, out.name());
+		int index = 0;
+		do {
+			if(index == 0)
+				key = new NamespacedKey(plugin, out.name());
+			else
+				key = new NamespacedKey(plugin, out.name() + index);
+			index++;
+		} while (Bukkit.getRecipe(key) != null);
 		
 		ShapedRecipe recipe = new ShapedRecipe(key, item);
 		

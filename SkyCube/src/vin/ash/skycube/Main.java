@@ -7,6 +7,7 @@ import vin.ash.skycube.listeners.BlockBreakListener;
 import vin.ash.skycube.listeners.JoinListener;
 import vin.ash.skycube.listeners.PlayerRespawnListener;
 import vin.ash.skycube.recipes.CycleRecipes;
+import vin.ash.skycube.recipes.EndRecipes;
 import vin.ash.skycube.recipes.ItemRecipes;
 import vin.ash.skycube.recipes.NetherRecipes;
 import vin.ash.skycube.recipes.SpawnEggRecipes;
@@ -30,6 +31,7 @@ public class Main extends JavaPlugin{
 		new CycleRecipes(this);
 		new SpawnEggRecipes(this);
 		new NetherRecipes(this);
+		new EndRecipes(this);
 		
 		CustomEnchants.register(CustomEnchants.TRANSMUTATION);
 	}

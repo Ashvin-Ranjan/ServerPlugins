@@ -33,7 +33,7 @@ public class NetherRecipes {
 		recipe.shape("GGG", "GTG", "GGG");
 		
 		recipe.setIngredient('G', Material.GLASS);
-		recipe.setIngredient('I', Material.TORCH);
+		recipe.setIngredient('T', Material.TORCH);
 		
 		return recipe;
 	}
