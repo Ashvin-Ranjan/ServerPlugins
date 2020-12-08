@@ -25,6 +25,9 @@ public class UtilRecipes {
 		Utils.registerSimpleRecipe(Material.GRASS_BLOCK, Material.GRAVEL, Material.JUNGLE_LEAVES, pl);
 		Utils.registerSimpleRecipe(Material.GRASS_BLOCK, Material.GRAVEL, Material.OAK_LEAVES, pl);
 		Utils.registerSimpleRecipe(Material.GRASS_BLOCK, Material.GRAVEL, Material.SPRUCE_LEAVES, pl);
+
+		Utils.registerSimpleRecipe(Material.MYCELIUM, Material.GRASS_BLOCK, Material.MUSHROOM_STEM, pl);
+		Utils.registerSimpleRecipe(Material.PODZOL, Material.GRASS_BLOCK, Material.VINE, pl);
 		
 		Utils.registerSimpleRecipe(Material.BONE_MEAL, Material.ACACIA_PLANKS, pl);
 		Utils.registerSimpleRecipe(Material.BONE_MEAL, Material.BIRCH_PLANKS, pl);

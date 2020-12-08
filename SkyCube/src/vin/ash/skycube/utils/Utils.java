@@ -1,7 +1,13 @@
 package vin.ash.skycube.utils;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
+import java.util.List;
 import java.util.Random;
+import java.util.Scanner;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -9,17 +15,26 @@ import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.World;
+import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.inventory.ShapelessRecipe;
+import org.bukkit.inventory.meta.BookMeta;
 
 import vin.ash.skycube.Main;
 
 
 public class Utils {
 	
-	public static String chat (String s) {
+	public static String chat(String s) {
 		return ChatColor.translateAlternateColorCodes('&', s);
+	}
+	
+	public static List<String> chat(List<String> s) {
+		List<String> out = new ArrayList<String>();
+		for(String st : s)
+			out.add(ChatColor.translateAlternateColorCodes('&', st));
+		return out;
 	}
 	
 	public static double getDist(Location a, Location b) {
@@ -28,7 +43,7 @@ public class Utils {
 	
 	public static Location getRandomLocation(World w, int spread) {
 		Random r = new Random(Calendar.getInstance().getTimeInMillis());
-		return new Location(w, r.nextDouble() * spread, 65, r.nextDouble() * spread);
+		return new Location(w, ((r.nextDouble() * spread * 2) - spread), 65, ((r.nextDouble() * spread * 2) - spread));
 	}
 	
 	public static void registerSimpleRecipe(ItemStack out, Material in, Main plugin) {
@@ -142,6 +157,40 @@ public class Utils {
 		recipe.setIngredient('X', in2);
 		
 		Bukkit.addRecipe(recipe);
+	}
+	
+	public static void playerQuickStart(Player p, Main plugin) {
+		
+		File file = new File(plugin.getDataFolder(), plugin.getConfig().getString("startBook_pages") + ".txt");
+		if(!file.exists()) {
+			return;
+		} else {
+			try {
+				Scanner reader;
+				reader = new Scanner(file);
+		    	List<String> out = new ArrayList<String>();
+		    	String outraw = "";
+		        while (reader.hasNextLine()) {
+		          outraw += reader.nextLine() + "\n";
+		        }
+		        reader.close();
+		        
+		        out = Arrays.asList(outraw.split("~"));
+				
+				ItemStack book = new ItemStack(Material.WRITTEN_BOOK);
+				BookMeta bm = (BookMeta) book.getItemMeta();
+				bm.setTitle("Help book");
+				bm.setAuthor(chat(plugin.getConfig().getString("startBook_author")));
+				bm.setTitle(chat(plugin.getConfig().getString("startBook_title")));
+				bm.setPages(chat(out));
+				book.setItemMeta(bm);
+
+		        p.getInventory().addItem(book);
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+				return;
+			}
+		}
 	}
 	
 }

@@ -32,7 +32,6 @@ public class JoinListener implements Listener{
 	@EventHandler
 	public void onJoin(PlayerJoinEvent e) {
 		Player p = e.getPlayer();
-		
 		if (!p.hasPlayedBefore()) {
 			//Find if there are any players online
 			if(plugin.getServer().getOnlinePlayers() != null) {
@@ -55,10 +54,11 @@ public class JoinListener implements Listener{
 			}
 			
 			//Messages for the new players
-			Bukkit.broadcastMessage(Utils.chat(plugin.getConfig().getString("messageJoin_first").replace("<player>", p.getName())));
+			e.setJoinMessage(Utils.chat(plugin.getConfig().getString("messageJoin_first").replace("<player>", p.getName())));
 			p.sendMessage(Utils.chat(plugin.getConfig().getString("messageTutorial_start")));
+			Utils.playerQuickStart(p, plugin);
 		} else {
-			Bukkit.broadcastMessage(Utils.chat(plugin.getConfig().getString("messageJoin_default").replace("<player>", p.getName())));
+			e.setJoinMessage(Utils.chat(plugin.getConfig().getString("messageJoin_default").replace("<player>", p.getName())));
 		}
 	}
 	

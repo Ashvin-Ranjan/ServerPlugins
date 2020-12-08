@@ -2,6 +2,7 @@ package vin.ash.skycube;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
+import vin.ash.skycube.commands.HelpCommand;
 import vin.ash.skycube.enchants.CustomEnchants;
 import vin.ash.skycube.listeners.BlockBreakListener;
 import vin.ash.skycube.listeners.JoinListener;
@@ -32,6 +33,8 @@ public class Main extends JavaPlugin{
 		new SpawnEggRecipes(this);
 		new NetherRecipes(this);
 		new EndRecipes(this);
+		
+		new HelpCommand(this);
 		
 		CustomEnchants.register(CustomEnchants.TRANSMUTATION);
 	}
