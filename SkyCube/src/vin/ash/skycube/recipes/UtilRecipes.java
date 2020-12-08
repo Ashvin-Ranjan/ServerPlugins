@@ -130,7 +130,7 @@ public class UtilRecipes {
 	}
 	
 	public ShapedRecipe boneRecipe() {
-		ItemStack item = new ItemStack(Material.OAK_SAPLING);
+		ItemStack item = new ItemStack(Material.BONE);
 		
 		NamespacedKey key = new NamespacedKey(plugin, "bone");
 		

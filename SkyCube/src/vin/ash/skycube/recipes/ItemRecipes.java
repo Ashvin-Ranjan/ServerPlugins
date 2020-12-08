@@ -19,6 +19,7 @@ public class ItemRecipes {
 		Bukkit.addRecipe(this.redstoneRecipe());
 		Bukkit.addRecipe(this.lapisRecipe());
 		Bukkit.addRecipe(this.diamondRecipe());
+		Bukkit.addRecipe(this.emeraldRecipe());
 	}
 
 	public ShapedRecipe coalRecipe() {
