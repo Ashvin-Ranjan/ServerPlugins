@@ -38,6 +38,7 @@ public class JoinListener implements Listener{
 				if(plugin.getServer().getOnlinePlayers().size() > 1 || plugin.getServer().getOfflinePlayers().length > 1) {
 					//If this is not the first player then spawn them in a random location
 					Location spawn = Utils.getRandomLocation(plugin.getServer().getWorlds().get(0), plugin.getConfig().getInt("spawn_spread"));
+					
 					p.setBedSpawnLocation(spawn);
 					p.teleport(spawn);
 					generateIsland(spawn);
@@ -46,6 +47,11 @@ public class JoinListener implements Listener{
 				} else {
 					//If this is the first player then spawn them at 0, 65, 0
 					Location spawn = new Location(Bukkit.getServer().getWorlds().get(0), 0, 65, 0);
+					int iter = 0;
+					while(!awayFromPlayers(spawn)) {
+						spawn = new Location(Bukkit.getServer().getWorlds().get(0), 0 + iter, 65, 0 + iter);
+						iter++;
+					}
 					p.setBedSpawnLocation(spawn);
 					p.teleport(spawn);
 					generateIsland(spawn);
@@ -60,6 +66,28 @@ public class JoinListener implements Listener{
 		} else {
 			e.setJoinMessage(Utils.chat(plugin.getConfig().getString("messageJoin_default").replace("<player>", p.getName())));
 		}
+	}
+	
+	boolean awayFromPlayers(Location l) {
+		File file = new File(plugin.getDataFolder(), plugin.getConfig().getString("spawn_file") + ".json");
+		JSONObject playerspawn = new JSONObject();
+		if(!file.exists()) {
+			return true;
+		} else {
+			JSONParser parser = new JSONParser();
+			try {
+				playerspawn = (JSONObject) parser.parse(new FileReader(file));
+			} catch (Exception ex) {
+				ex.printStackTrace();
+			}
+		}
+		boolean check = true;
+		for(Object key : playerspawn.keySet().toArray()) {
+			if(Utils.getDist(l,  Utils.stringToLocation(l.getWorld(), (String) playerspawn.get(key))) <= plugin.getConfig().getInt("minDistAway")) 
+				check = false;
+		}
+		
+		return check;
 	}
 	
 	void generateIsland(Location playerloc) {

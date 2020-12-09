@@ -24,6 +24,7 @@ The config for this is very simple
 - `startBook_pages`: The filename [without .txt] of the file that contains the text for the starting book
 - `registerMinHeight`: Boolean to register a min height (if the player goes below this they die) this may take up a lot of server processing power if it is big.
 - `minHeight`: The min height for the players to be at, only needed if `registerMinHeight` is true
+- `minDistAway`: The minimum distance away from other players a player needs to spawn from
 
 Here is my default config.yml
 ```
@@ -43,6 +44,8 @@ startBook_pages: 'book'
 
 registerMinHeight: true
 minHeight: 4
+
+minDistAway: 10
 ```
 
 ### The starting book pages

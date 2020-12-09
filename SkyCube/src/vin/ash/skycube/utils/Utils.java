@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
@@ -17,6 +18,7 @@ import org.bukkit.NamespacedKey;
 import org.bukkit.World;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.Recipe;
 import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.inventory.ShapelessRecipe;
 import org.bukkit.inventory.meta.BookMeta;
@@ -62,6 +64,10 @@ public class Utils {
 		recipe.addIngredient(1, in);
 		
 		Bukkit.addRecipe(recipe);
+	}
+	
+	public static Location stringToLocation(World w, String s) {
+		return new Location(w, Integer.parseInt(s.split(" ")[0]), Integer.parseInt(s.split(" ")[1]), Integer.parseInt(s.split(" ")[2]));
 	}
 	
 	public static void registerSimpleRecipe(Material out, Material in, Main plugin) {
@@ -155,12 +161,23 @@ public class Utils {
 		
 		recipe.setIngredient('I', in);
 		recipe.setIngredient('X', in2);
-		
+
 		Bukkit.addRecipe(recipe);
 	}
 	
 	public static void playerQuickStart(Player p, Main plugin) {
-		
+		Iterator<Recipe> recipes = Bukkit.recipeIterator();
+		while(recipes.hasNext()) {
+			try {
+				Recipe recipe = recipes.next();
+				if(recipe instanceof ShapedRecipe){
+					p.discoverRecipe(((ShapedRecipe) recipe).getKey());
+				}
+				else if(recipe instanceof ShapelessRecipe) {
+					p.discoverRecipe(((ShapelessRecipe) recipe).getKey());
+				}
+			} catch (Exception e) {}
+		}
 		File file = new File(plugin.getDataFolder(), plugin.getConfig().getString("startBook_pages") + ".txt");
 		if(!file.exists()) {
 			return;
