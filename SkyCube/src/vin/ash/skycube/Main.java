@@ -6,6 +6,7 @@ import vin.ash.skycube.commands.HelpCommand;
 import vin.ash.skycube.enchants.CustomEnchants;
 import vin.ash.skycube.listeners.BlockBreakListener;
 import vin.ash.skycube.listeners.JoinListener;
+import vin.ash.skycube.listeners.PlayerMoveListener;
 import vin.ash.skycube.listeners.PlayerRespawnListener;
 import vin.ash.skycube.recipes.CycleRecipes;
 import vin.ash.skycube.recipes.EndRecipes;
@@ -25,6 +26,7 @@ public class Main extends JavaPlugin{
 		new PlayerRespawnListener(this);
 		new JoinListener(this);
 		new BlockBreakListener(this);
+		new PlayerMoveListener(this);
 		
 		new ItemRecipes(this);
 		new UtilRecipes(this);

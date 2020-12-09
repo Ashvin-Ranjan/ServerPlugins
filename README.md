@@ -22,6 +22,8 @@ The config for this is very simple
 - `startBook_author`: The author of the starting book
 - `startBook_title`: The title of the starting book
 - `startBook_pages`: The filename [without .txt] of the file that contains the text for the starting book
+- `registerMinHeight`: Boolean to register a min height (if the player goes below this they die) this may take up a lot of server processing power if it is big.
+- `minHeight`: The min height for the players to be at, only needed if `registerMinHeight` is true
 
 Here is my default config.yml
 ```
@@ -38,6 +40,9 @@ spawn_file: 'spawn'
 startBook_author: 'Asra_31'
 startBook_title: 'Introduction to Sky Cube!'
 startBook_pages: 'book'
+
+registerMinHeight: true
+minHeight: 4
 ```
 
 ### The starting book pages
