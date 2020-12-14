@@ -18,6 +18,7 @@ Main plugin;
 		Utils.registerSimpleRecipe(Material.END_STONE, Material.CHORUS_FRUIT, Material.COBBLESTONE, pl);
 		Utils.registerSimpleRecipe(Material.CHORUS_FRUIT, Material.BEETROOT, Material.PURPLE_DYE, pl);
 		Utils.registerSimpleRecipe(Material.PURPUR_BLOCK, Material.END_STONE, Material.PURPLE_DYE, pl);
+		Utils.registerSimpleRecipe(Material.CHORUS_FLOWER, Material.CHORUS_FRUIT, pl);
 		Bukkit.addRecipe(elytraRecipe());
 	}
 	

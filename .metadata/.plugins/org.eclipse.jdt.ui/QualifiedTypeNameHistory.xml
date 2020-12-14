@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="org.bukkit.plugin.java.JavaPlugin"/>
-<fullyQualifiedTypeName name="org.bukkit.command.CommandExecutor"/>
 <fullyQualifiedTypeName name="net.minecraft.server.v1_16_R3.Main"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="org.bukkit.ChatColor"/>
-<fullyQualifiedTypeName name="vin.ash.skycube.utils.Utils"/>
 <fullyQualifiedTypeName name="net.minecraft.server.v1_16_R3.World"/>
 <fullyQualifiedTypeName name="java.util.Random"/>
 <fullyQualifiedTypeName name="java.util.Collection"/>
@@ -13,8 +10,6 @@
 <fullyQualifiedTypeName name="org.bukkit.Server"/>
 <fullyQualifiedTypeName name="org.apache.commons.lang.ArrayUtils"/>
 <fullyQualifiedTypeName name="org.bukkit.OfflinePlayer"/>
-<fullyQualifiedTypeName name="vin.ash.skycube.Main"/>
-<fullyQualifiedTypeName name="org.bukkit.inventory.ShapedRecipe"/>
 <fullyQualifiedTypeName name="org.bukkit.inventory.meta.ItemMeta"/>
 <fullyQualifiedTypeName name="org.bukkit.inventory.ItemFlag"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
@@ -24,29 +19,21 @@
 <fullyQualifiedTypeName name="vin.ash.skycube.recipes.UtilRecipes"/>
 <fullyQualifiedTypeName name="vin.ash.skycube.recipes.ItemRecipes"/>
 <fullyQualifiedTypeName name="org.bukkit.enchantments.EnchantmentTarget"/>
-<fullyQualifiedTypeName name="org.bukkit.enchantments.Enchantment"/>
 <fullyQualifiedTypeName name="java.lang.reflect.Field"/>
 <fullyQualifiedTypeName name="org.bukkit.craftbukkit.libs.it.unimi.dsi.fastutil.Arrays"/>
-<fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
 <fullyQualifiedTypeName name="org.bukkit.event.block.BlockBreakEvent"/>
 <fullyQualifiedTypeName name="org.bukkit.entity.Player"/>
-<fullyQualifiedTypeName name="org.bukkit.GameMode"/>
-<fullyQualifiedTypeName name="org.bukkit.inventory.ItemStack"/>
 <fullyQualifiedTypeName name="vin.ash.skycube.listeners.TransmutationListener"/>
 <fullyQualifiedTypeName name="vin.ash.skycube.enchants.CustomEnchants"/>
 <fullyQualifiedTypeName name="net.md_5.bungee.api.ChatColor"/>
-<fullyQualifiedTypeName name="org.bukkit.Bukkit"/>
 <fullyQualifiedTypeName name="vin.ash.skycube.recipes.TransmutationRecipes"/>
 <fullyQualifiedTypeName name="java.util.Calendar"/>
 <fullyQualifiedTypeName name="org.bukkit.World"/>
 <fullyQualifiedTypeName name="org.bukkit.metadata.MetadataValue"/>
 <fullyQualifiedTypeName name="org.bukkit.metadata.FixedMetadataValue"/>
-<fullyQualifiedTypeName name="org.bukkit.event.Listener"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="vin.ash.skycube.listeners.RegenerateListener"/>
-<fullyQualifiedTypeName name="org.bukkit.Material"/>
 <fullyQualifiedTypeName name="vin.ash.skycube.listeners.JoinListener"/>
 <fullyQualifiedTypeName name="vin.ash.skycube.listeners.BlockBreakListener"/>
 <fullyQualifiedTypeName name="com.google.gson.JsonObject"/>
@@ -55,4 +42,22 @@
 <fullyQualifiedTypeName name="org.json.simple.JSONArray"/>
 <fullyQualifiedTypeName name="java.io.FileReader"/>
 <fullyQualifiedTypeName name="org.bukkit.Location"/>
+<fullyQualifiedTypeName name="org.bukkit.inventory.ItemStack"/>
+<fullyQualifiedTypeName name="org.bukkit.inventory.ShapedRecipe"/>
+<fullyQualifiedTypeName name="org.bukkit.Material"/>
+<fullyQualifiedTypeName name="vin.ash.skycube.recipes.NetherRecipes"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="vin.ash.skycube.Main"/>
+<fullyQualifiedTypeName name="org.bukkit.command.defaults.HelpCommand"/>
+<fullyQualifiedTypeName name="vin.ash.skycube.commands.HelpCommand"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="org.bukkit.Bukkit"/>
+<fullyQualifiedTypeName name="org.bukkit.event.Listener"/>
+<fullyQualifiedTypeName name="org.bukkit.event.player.PlayerMoveEvent"/>
+<fullyQualifiedTypeName name="org.bukkit.GameMode"/>
+<fullyQualifiedTypeName name="java.util.UUID"/>
+<fullyQualifiedTypeName name="vin.ash.skycube.utils.Utils"/>
+<fullyQualifiedTypeName name="javax.swing.text.html.HTMLDocument.Iterator"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="org.bukkit.enchantments.Enchantment"/>
 </qualifiedTypeNameHistroy>

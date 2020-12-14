@@ -37,6 +37,11 @@ public class UtilRecipes {
 		Utils.registerSimpleRecipe(Material.BONE_MEAL, Material.OAK_PLANKS, pl);
 		Utils.registerSimpleRecipe(Material.BONE_MEAL, Material.SPRUCE_PLANKS, pl);
 		Utils.registerSimpleRecipe(Material.BONE_MEAL, Material.WARPED_PLANKS, pl);
+
+		Utils.registerSimpleRecipe(Material.WHEAT_SEEDS, Material.GRASS, pl);
+		Utils.registerSimpleRecipe(Material.WHEAT_SEEDS, Material.TALL_GRASS, pl);
+
+		Utils.registerCubeRecipe(Material.LEATHER, Material.PAPER, pl);
 		
 		Utils.registerSimpleRecipe(new ItemStack(Material.GRAVEL, 2), Material.COBBLESTONE, pl);
 		Utils.registerSimpleRecipe(new ItemStack(Material.SAND, 2), Material.GRAVEL, pl);
@@ -55,6 +60,8 @@ public class UtilRecipes {
 		
 		Bukkit.addRecipe(boneRecipe());
 
+		Bukkit.addRecipe(sugarRecipe());
+
 		Utils.registerXRecipe(Material.OBSIDIAN, Material.DIAMOND, Material.COBBLESTONE, pl);
 		
 		Bukkit.addRecipe(mushroomRecipe(Material.RED_MUSHROOM, Material.RED_MUSHROOM_BLOCK));
@@ -62,7 +69,27 @@ public class UtilRecipes {
 		Utils.registerSimpleRecipe(Material.MUSHROOM_STEM, Material.RED_MUSHROOM_BLOCK, Material.WHITE_DYE, pl);
 		Utils.registerSimpleRecipe(Material.MUSHROOM_STEM, Material.BROWN_MUSHROOM_BLOCK, Material.WHITE_DYE, pl);
 		
+		Utils.registerCubeRecipe(Material.BEEHIVE, Material.SUGAR, pl);
 		
+		Utils.registerSimpleRecipe(Material.SNOWBALL, Material.CLAY_BALL, pl);
+		
+		Bukkit.addRecipe(iceRecipe());
+
+		Utils.registerSimpleRecipe(new ItemStack(Material.STRING, 4), Material.WHITE_WOOL, pl);
+	}
+	
+	public ShapedRecipe iceRecipe() {
+		ItemStack item = new ItemStack(Material.ICE);
+		
+		NamespacedKey key = new NamespacedKey(plugin, "ice");
+		
+		ShapedRecipe recipe = new ShapedRecipe(key, item);
+		
+		recipe.shape("SS", "SS");
+		
+		recipe.setIngredient('S', Material.SNOW_BLOCK);
+		
+		return recipe;
 	}
 	
 	public ShapedRecipe mushroomRecipe(Material mushroom, Material block) {
@@ -134,6 +161,20 @@ public class UtilRecipes {
 		recipe.shape("S", "S");
 		
 		recipe.setIngredient('S', Material.WHEAT_SEEDS);
+		
+		return recipe;
+	}
+	
+	public ShapedRecipe sugarRecipe() {
+		ItemStack item = new ItemStack(Material.SUGAR, 2);
+		
+		NamespacedKey key = new NamespacedKey(plugin, "sugar");
+		
+		ShapedRecipe recipe = new ShapedRecipe(key, item);
+		
+		recipe.shape("S", "S");
+		
+		recipe.setIngredient('S', Material.SUGAR_CANE);
 		
 		return recipe;
 	}
