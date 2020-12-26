@@ -21,6 +21,8 @@ public class NetherRecipes {
 		Utils.registerSimpleRecipe(Material.SOUL_SOIL, Material.SOUL_SAND, pl);
 		Utils.registerSimpleRecipe(Material.NETHER_BRICK, Material.BRICK, Material.NETHER_WART, pl);
 		Utils.registerXRecipe(Material.ANCIENT_DEBRIS, Material.DIAMOND_BLOCK, Material.GOLD_BLOCK, pl);
+		Bukkit.addRecipe(blazeRodRecipe());
+		Bukkit.addRecipe(netherStarRecipe());
 		Bukkit.addRecipe(glowstoneRecipe());
 	}
 	
@@ -35,6 +37,36 @@ public class NetherRecipes {
 		
 		recipe.setIngredient('G', Material.GLASS);
 		recipe.setIngredient('T', Material.TORCH);
+		
+		return recipe;
+	}
+	
+	private ShapedRecipe blazeRodRecipe() {
+		ItemStack item = new ItemStack(Material.BLAZE_ROD);
+		
+		NamespacedKey key = new NamespacedKey(plugin, "blaze_rod");
+		
+		ShapedRecipe recipe = new ShapedRecipe(key, item);
+		
+		recipe.shape("GGG", "GSG", "GGG");
+		
+		recipe.setIngredient('G', Material.GOLD_INGOT);
+		recipe.setIngredient('S', Material.STICK);
+		
+		return recipe;
+	}
+	
+	private ShapedRecipe netherStarRecipe() {
+		ItemStack item = new ItemStack(Material.NETHER_STAR);
+		
+		NamespacedKey key = new NamespacedKey(plugin, "nether_star");
+		
+		ShapedRecipe recipe = new ShapedRecipe(key, item);
+		
+		recipe.shape(" B ", "BNB", " B ");
+		
+		recipe.setIngredient('B', Material.BLAZE_ROD);
+		recipe.setIngredient('N', Material.NETHERITE_INGOT);
 		
 		return recipe;
 	}
