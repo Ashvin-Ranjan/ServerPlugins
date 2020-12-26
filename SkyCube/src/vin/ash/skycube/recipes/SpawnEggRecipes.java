@@ -20,9 +20,9 @@ public class SpawnEggRecipes {
 		Utils.registerCubeRecipe(Material.SHEEP_SPAWN_EGG, Material.HAY_BLOCK, pl);
 		Utils.registerCubeRecipe(Material.COD_SPAWN_EGG, Material.BONE, pl);
 		Utils.registerCubeRecipe(Material.MOOSHROOM_SPAWN_EGG, Material.RED_MUSHROOM, pl);
+		Utils.registerCubeRecipe(Material.PIG_SPAWN_EGG, Material.CARROT, pl);
 		Utils.registerCubeRecipe(Material.PANDA_SPAWN_EGG, Material.BAMBOO, pl);
 		Utils.registerCubeRecipe(Material.TURTLE_SPAWN_EGG, Material.SEAGRASS, pl);
-		Utils.registerCubeRecipe(Material.TURTLE_SPAWN_EGG, Material.TALL_SEAGRASS, pl);
 		
 		Utils.registerXRecipe(Material.ZOMBIFIED_PIGLIN_SPAWN_EGG, Material.GOLD_INGOT, Material.ROTTEN_FLESH, pl);
 		Utils.registerXRecipe(Material.PIGLIN_SPAWN_EGG, Material.GOLD_INGOT, Material.PORKCHOP, pl);

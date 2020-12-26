@@ -17,7 +17,6 @@ public class UtilRecipes {
 		
 		Utils.registerSimpleRecipe(Material.GRASS_BLOCK, Material.DIRT, pl);
 		Utils.registerSimpleRecipe(Material.SEAGRASS, Material.GRASS, pl);
-		Utils.registerSimpleRecipe(Material.TALL_SEAGRASS, Material.TALL_GRASS, pl);
 		
 		Utils.registerSimpleRecipe(Material.GRASS_BLOCK, Material.GRAVEL, Material.ACACIA_LEAVES, pl);
 		Utils.registerSimpleRecipe(Material.GRASS_BLOCK, Material.GRAVEL, Material.BIRCH_LEAVES, pl);
