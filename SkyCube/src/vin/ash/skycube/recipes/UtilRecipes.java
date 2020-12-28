@@ -75,6 +75,8 @@ public class UtilRecipes {
 		Bukkit.addRecipe(iceRecipe());
 
 		Utils.registerSimpleRecipe(new ItemStack(Material.STRING, 4), Material.WHITE_WOOL, pl);
+
+		Bukkit.addRecipe(bottleOEnchantingRecipe());
 	}
 	
 	public ShapedRecipe iceRecipe() {
@@ -146,6 +148,21 @@ public class UtilRecipes {
 		
 		recipe.setIngredient('I', Material.IRON_INGOT);
 		recipe.setIngredient('L', Material.LAPIS_BLOCK);
+		
+		return recipe;
+	}
+	
+	public ShapedRecipe bottleOEnchantingRecipe() {
+		ItemStack item = new ItemStack(Material.EXPERIENCE_BOTTLE, 3);
+		
+		NamespacedKey key = new NamespacedKey(plugin, "enchanting_bottle");
+		
+		ShapedRecipe recipe = new ShapedRecipe(key, item);
+		
+		recipe.shape("GDG", " G ");
+		
+		recipe.setIngredient('G', Material.GLASS);
+		recipe.setIngredient('D', Material.DIAMOND_BLOCK);
 		
 		return recipe;
 	}

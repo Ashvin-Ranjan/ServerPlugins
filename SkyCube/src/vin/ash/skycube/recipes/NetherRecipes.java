@@ -21,6 +21,7 @@ public class NetherRecipes {
 		Utils.registerSimpleRecipe(Material.SOUL_SOIL, Material.SOUL_SAND, pl);
 		Utils.registerSimpleRecipe(Material.NETHER_BRICK, Material.BRICK, Material.NETHER_WART, pl);
 		Utils.registerXRecipe(Material.ANCIENT_DEBRIS, Material.DIAMOND_BLOCK, Material.GOLD_BLOCK, pl);
+		Utils.registerXRecipe(Material.NETHER_QUARTZ_ORE, Material.NETHERRACK, Material.WHITE_DYE, pl);
 		Bukkit.addRecipe(blazeRodRecipe());
 		Bukkit.addRecipe(netherStarRecipe());
 		Bukkit.addRecipe(glowstoneRecipe());
