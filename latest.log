@@ -1,0 +1,473 @@
+[17:18:58] [main/ERROR]: No key structures in MapLike[{"layers":[{"block":"minecraft:air","height":1}],"biome":"minecraft:the_void"}]; Not a registry ops
+[17:18:58] [main/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[17:18:58] [main/INFO]: Reloading ResourceManager: Default, bukkit, afk display v1.1.0.zip, more mob heads v2.6.2.zip, multiplayer sleep v2.2.1.zip, player head drops v1.1.0.zip, wandering trades hermit edition v1.4.0.zip
+[17:18:59] [Worker-Main-13/INFO]: Loaded 7 recipes
+[17:19:00] [Worker-Main-13/WARN]: Found validation problem in {minecraft:entities/shulker}.pools[2].entries[0]: Unknown loot table called minecraft:entities/reference/extra/shulker
+[17:19:00] [Worker-Main-13/WARN]: Found validation problem in {minecraft:entities/ender_dragon}.pools[0].entries[0]: Unknown loot table called minecraft:entities/reference/extra/ender_dragon
+[17:19:01] [Server thread/INFO]: Starting minecraft server version 1.16.4
+[17:19:01] [Server thread/INFO]: Loading properties
+[17:19:01] [Server thread/INFO]: This server is running CraftBukkit version git-Spigot-f011ca2-3af81c7 (MC: 1.16.4) (Implementing API version 1.16.4-R0.1-SNAPSHOT)
+[17:19:01] [Server thread/INFO]: Debug logging is disabled
+[17:19:01] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[17:19:01] [Server thread/INFO]: Using 4 threads for Netty based IO
+[17:19:01] [Server thread/INFO]: Default game type: SURVIVAL
+[17:19:01] [Server thread/INFO]: Generating keypair
+[17:19:01] [Server thread/INFO]: Starting Minecraft server on 72.46.133.71:25612
+[17:19:01] [Server thread/INFO]: Using epoll channel type
+[17:19:03] [Server thread/INFO]: [SkyCube] Loading SkyCube v1.4.6
+[17:19:03] [Server thread/INFO]: [VoidGenerator] Loading VoidGenerator v1.7.0
+[17:19:03] [Server thread/INFO]: [GeneralServerPack] Loading GeneralServerPack v1.0.3
+[17:19:03] [Server thread/INFO]: [VoidGenerator] Enabling VoidGenerator v1.7.0
+[17:19:03] [Server thread/INFO]: [VoidGenerator] v1_15
+[17:19:03] [Server thread/INFO]: Preparing level "world_1607289592"
+[17:19:03] [Server thread/INFO]: -------- World Settings For [world_1607289592] --------
+[17:19:03] [Server thread/INFO]: Experience Merge Radius: 3.0
+[17:19:03] [Server thread/INFO]: Mob Spawn Range: 8
+[17:19:03] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[17:19:03] [Server thread/INFO]: Cane Growth Modifier: 100%
+[17:19:03] [Server thread/INFO]: Melon Growth Modifier: 100%
+[17:19:03] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[17:19:03] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[17:19:03] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[17:19:03] [Server thread/INFO]: Beetroot Growth Modifier: 100%
+[17:19:03] [Server thread/INFO]: Carrot Growth Modifier: 100%
+[17:19:03] [Server thread/INFO]: Potato Growth Modifier: 100%
+[17:19:03] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[17:19:03] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[17:19:03] [Server thread/INFO]: Vine Growth Modifier: 100%
+[17:19:03] [Server thread/INFO]: Cocoa Growth Modifier: 100%
+[17:19:03] [Server thread/INFO]: Bamboo Growth Modifier: 100%
+[17:19:03] [Server thread/INFO]: SweetBerry Growth Modifier: 100%
+[17:19:03] [Server thread/INFO]: Kelp Growth Modifier: 100%
+[17:19:03] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Ra 48 / Mi 16 / Tiv true
+[17:19:03] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 1 Hopper Amount: 1
+[17:19:03] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Desert: 14357617 Igloo: 14357618 Jungle: 14357619 Swamp: 14357620 Monument: 10387313 Ocean: 14357621 Shipwreck: 165745295 End City: 10387313 Slime: 987234911 Bastion: 30084232 Fortress: 30084232 Mansion: 10387319 Fossil: 14357921 Portal: 34222645
+[17:19:03] [Server thread/INFO]: Max TNT Explosions: 100
+[17:19:03] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[17:19:03] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[17:19:03] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[17:19:03] [Server thread/INFO]: Item Despawn Rate: 6000
+[17:19:03] [Server thread/INFO]: Item Merge Radius: 2.5
+[17:19:03] [Server thread/INFO]: View Distance: 10
+[17:19:03] [Server thread/INFO]: Arrow Despawn Rate: 1200 Trident Respawn Rate:1200
+[17:19:03] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[17:19:03] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[17:19:03] [Server thread/INFO]: -------- World Settings For [world_1607289592_the_end] --------
+[17:19:03] [Server thread/INFO]: Experience Merge Radius: 3.0
+[17:19:03] [Server thread/INFO]: Mob Spawn Range: 8
+[17:19:03] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[17:19:03] [Server thread/INFO]: Cane Growth Modifier: 100%
+[17:19:03] [Server thread/INFO]: Melon Growth Modifier: 100%
+[17:19:03] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[17:19:03] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[17:19:03] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[17:19:03] [Server thread/INFO]: Beetroot Growth Modifier: 100%
+[17:19:03] [Server thread/INFO]: Carrot Growth Modifier: 100%
+[17:19:03] [Server thread/INFO]: Potato Growth Modifier: 100%
+[17:19:03] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[17:19:03] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[17:19:03] [Server thread/INFO]: Vine Growth Modifier: 100%
+[17:19:03] [Server thread/INFO]: Cocoa Growth Modifier: 100%
+[17:19:03] [Server thread/INFO]: Bamboo Growth Modifier: 100%
+[17:19:03] [Server thread/INFO]: SweetBerry Growth Modifier: 100%
+[17:19:03] [Server thread/INFO]: Kelp Growth Modifier: 100%
+[17:19:03] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Ra 48 / Mi 16 / Tiv true
+[17:19:03] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 1 Hopper Amount: 1
+[17:19:03] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Desert: 14357617 Igloo: 14357618 Jungle: 14357619 Swamp: 14357620 Monument: 10387313 Ocean: 14357621 Shipwreck: 165745295 End City: 10387313 Slime: 987234911 Bastion: 30084232 Fortress: 30084232 Mansion: 10387319 Fossil: 14357921 Portal: 34222645
+[17:19:03] [Server thread/INFO]: Max TNT Explosions: 100
+[17:19:03] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[17:19:03] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[17:19:03] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[17:19:03] [Server thread/INFO]: Item Despawn Rate: 6000
+[17:19:03] [Server thread/INFO]: Item Merge Radius: 2.5
+[17:19:03] [Server thread/INFO]: View Distance: 10
+[17:19:03] [Server thread/INFO]: Arrow Despawn Rate: 1200 Trident Respawn Rate:1200
+[17:19:03] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[17:19:03] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[17:19:03] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[17:19:04] [Server thread/INFO]: Preparing spawn area: 0%
+[17:19:04] [Server thread/INFO]: Preparing spawn area: 0%
+[17:19:04] [Server thread/INFO]: Time elapsed: 1480 ms
+[17:19:04] [Server thread/INFO]: Preparing start region for dimension minecraft:the_end
+[17:19:05] [Server thread/INFO]: Preparing spawn area: 0%
+[17:19:05] [Server thread/INFO]: Preparing spawn area: 3%
+[17:19:05] [Worker-Main-15/INFO]: Preparing spawn area: 83%
+[17:19:06] [Server thread/INFO]: Time elapsed: 1449 ms
+[17:19:06] [Server thread/INFO]: [SkyCube] Enabling SkyCube v1.4.6
+[17:19:07] [Server thread/INFO]: [GeneralServerPack] Enabling GeneralServerPack v1.0.3
+[17:19:07] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[17:19:07] [Server thread/INFO]: Done (4.047s)! For help, type "help"
+[17:19:18] [User Authenticator #1/INFO]: UUID of player Asra_31 is 70a686c6-733e-4737-b667-00656911f98f
+[17:19:19] [Server thread/INFO]: Asra_31[/73.241.149.126:53750] logged in with entity id 57 at ([world_1607289592]-0.5784606228175868, 63.0, -0.04756816175649009)
+[17:19:28] [Server thread/ERROR]: Could not pass event PrepareAnvilEvent to SkyCube v1.4.6
+org.bukkit.event.EventException: null
+	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:319) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:70) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at org.bukkit.plugin.SimplePluginManager.fireEvent(SimplePluginManager.java:589) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:576) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at org.bukkit.craftbukkit.v1_16_R3.event.CraftEventFactory.callPrepareAnvilEvent(CraftEventFactory.java:1428) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.ContainerAnvil.e(ContainerAnvil.java:266) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.ContainerAnvilAbstract.a(ContainerAnvilAbstract.java:67) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.ContainerAnvilAbstract$1.update(ContainerAnvilAbstract.java:12) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.InventorySubcontainer.setItem(InventorySubcontainer.java:183) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.Slot.set(SourceFile:82) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.Container.a(Container.java:636) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.ContainerAnvilAbstract.shiftClick(ContainerAnvilAbstract.java:111) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.Container.b(Container.java:333) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.Container.a(Container.java:182) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.PlayerConnection.a(PlayerConnection.java:2283) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.PacketPlayInWindowClick.a(SourceFile:32) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.PacketPlayInWindowClick.a(SourceFile:10) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.PlayerConnectionUtils.lambda$0(PlayerConnectionUtils.java:19) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.TickTask.run(SourceFile:18) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.IAsyncTaskHandler.executeTask(SourceFile:144) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.IAsyncTaskHandlerReentrant.executeTask(SourceFile:23) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.IAsyncTaskHandler.executeNext(SourceFile:118) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.MinecraftServer.bb(MinecraftServer.java:941) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.MinecraftServer.executeNext(MinecraftServer.java:934) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.IAsyncTaskHandler.awaitTasks(SourceFile:127) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.MinecraftServer.sleepForTick(MinecraftServer.java:918) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.MinecraftServer.w(MinecraftServer.java:850) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.MinecraftServer.lambda$0(MinecraftServer.java:164) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_272]
+Caused by: java.lang.IllegalArgumentException: Specified enchantment cannot be applied to this itemstack
+	at org.bukkit.inventory.ItemStack.addEnchantment(ItemStack.java:394) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at vin.ash.skycube.listeners.AnvilListener.onPrepareAnvil(AnvilListener.java:37) ~[?:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_272]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_272]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_272]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_272]
+	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:315) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	... 28 more
+[17:19:28] [Server thread/ERROR]: Could not pass event PrepareAnvilEvent to SkyCube v1.4.6
+org.bukkit.event.EventException: null
+	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:319) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:70) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at org.bukkit.plugin.SimplePluginManager.fireEvent(SimplePluginManager.java:589) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:576) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at org.bukkit.craftbukkit.v1_16_R3.event.CraftEventFactory.callPrepareAnvilEvent(CraftEventFactory.java:1428) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.ContainerAnvil.e(ContainerAnvil.java:266) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.ContainerAnvilAbstract.a(ContainerAnvilAbstract.java:67) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.ContainerAnvilAbstract$1.update(ContainerAnvilAbstract.java:12) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.Slot.d(SourceFile:87) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.Slot.set(SourceFile:83) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.Container.a(Container.java:636) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.ContainerAnvilAbstract.shiftClick(ContainerAnvilAbstract.java:111) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.Container.b(Container.java:333) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.Container.a(Container.java:182) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.PlayerConnection.a(PlayerConnection.java:2283) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.PacketPlayInWindowClick.a(SourceFile:32) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.PacketPlayInWindowClick.a(SourceFile:10) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.PlayerConnectionUtils.lambda$0(PlayerConnectionUtils.java:19) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.TickTask.run(SourceFile:18) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.IAsyncTaskHandler.executeTask(SourceFile:144) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.IAsyncTaskHandlerReentrant.executeTask(SourceFile:23) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.IAsyncTaskHandler.executeNext(SourceFile:118) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.MinecraftServer.bb(MinecraftServer.java:941) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.MinecraftServer.executeNext(MinecraftServer.java:934) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.IAsyncTaskHandler.awaitTasks(SourceFile:127) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.MinecraftServer.sleepForTick(MinecraftServer.java:918) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.MinecraftServer.w(MinecraftServer.java:850) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.MinecraftServer.lambda$0(MinecraftServer.java:164) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_272]
+Caused by: java.lang.IllegalArgumentException: Specified enchantment cannot be applied to this itemstack
+	at org.bukkit.inventory.ItemStack.addEnchantment(ItemStack.java:394) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at vin.ash.skycube.listeners.AnvilListener.onPrepareAnvil(AnvilListener.java:37) ~[?:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_272]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_272]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_272]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_272]
+	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:315) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	... 28 more
+[17:19:28] [Server thread/ERROR]: Could not pass event PrepareAnvilEvent to SkyCube v1.4.6
+org.bukkit.event.EventException: null
+	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:319) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:70) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at org.bukkit.plugin.SimplePluginManager.fireEvent(SimplePluginManager.java:589) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:576) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at org.bukkit.craftbukkit.v1_16_R3.event.CraftEventFactory.callPrepareAnvilEvent(CraftEventFactory.java:1428) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.ContainerAnvil.e(ContainerAnvil.java:266) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.ContainerAnvilAbstract.a(ContainerAnvilAbstract.java:67) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.ContainerAnvilAbstract$1.update(ContainerAnvilAbstract.java:12) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.Slot.d(SourceFile:87) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.Container.a(Container.java:639) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.ContainerAnvilAbstract.shiftClick(ContainerAnvilAbstract.java:111) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.Container.b(Container.java:333) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.Container.a(Container.java:182) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.PlayerConnection.a(PlayerConnection.java:2283) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.PacketPlayInWindowClick.a(SourceFile:32) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.PacketPlayInWindowClick.a(SourceFile:10) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.PlayerConnectionUtils.lambda$0(PlayerConnectionUtils.java:19) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.TickTask.run(SourceFile:18) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.IAsyncTaskHandler.executeTask(SourceFile:144) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.IAsyncTaskHandlerReentrant.executeTask(SourceFile:23) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.IAsyncTaskHandler.executeNext(SourceFile:118) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.MinecraftServer.bb(MinecraftServer.java:941) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.MinecraftServer.executeNext(MinecraftServer.java:934) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.IAsyncTaskHandler.awaitTasks(SourceFile:127) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.MinecraftServer.sleepForTick(MinecraftServer.java:918) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.MinecraftServer.w(MinecraftServer.java:850) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.MinecraftServer.lambda$0(MinecraftServer.java:164) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_272]
+Caused by: java.lang.IllegalArgumentException: Specified enchantment cannot be applied to this itemstack
+	at org.bukkit.inventory.ItemStack.addEnchantment(ItemStack.java:394) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at vin.ash.skycube.listeners.AnvilListener.onPrepareAnvil(AnvilListener.java:37) ~[?:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_272]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_272]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_272]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_272]
+	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:315) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	... 27 more
+[17:19:28] [Server thread/ERROR]: Could not pass event PrepareAnvilEvent to SkyCube v1.4.6
+org.bukkit.event.EventException: null
+	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:319) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:70) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at org.bukkit.plugin.SimplePluginManager.fireEvent(SimplePluginManager.java:589) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:576) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at org.bukkit.craftbukkit.v1_16_R3.event.CraftEventFactory.callPrepareAnvilEvent(CraftEventFactory.java:1428) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.ContainerAnvil.e(ContainerAnvil.java:266) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.ContainerAnvilAbstract.a(ContainerAnvilAbstract.java:67) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.ContainerAnvilAbstract$1.update(ContainerAnvilAbstract.java:12) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.InventorySubcontainer.setItem(InventorySubcontainer.java:183) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.Slot.set(SourceFile:82) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.Container.a(Container.java:636) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.ContainerAnvilAbstract.shiftClick(ContainerAnvilAbstract.java:111) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.Container.b(Container.java:333) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.Container.a(Container.java:182) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.PlayerConnection.a(PlayerConnection.java:2283) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.PacketPlayInWindowClick.a(SourceFile:32) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.PacketPlayInWindowClick.a(SourceFile:10) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.PlayerConnectionUtils.lambda$0(PlayerConnectionUtils.java:19) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.TickTask.run(SourceFile:18) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.IAsyncTaskHandler.executeTask(SourceFile:144) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.IAsyncTaskHandlerReentrant.executeTask(SourceFile:23) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.IAsyncTaskHandler.executeNext(SourceFile:118) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.MinecraftServer.bb(MinecraftServer.java:941) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.MinecraftServer.executeNext(MinecraftServer.java:934) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.IAsyncTaskHandler.executeAll(SourceFile:103) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.MinecraftServer.sleepForTick(MinecraftServer.java:917) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.MinecraftServer.w(MinecraftServer.java:850) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.MinecraftServer.lambda$0(MinecraftServer.java:164) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_272]
+Caused by: java.lang.IllegalArgumentException: Specified enchantment cannot be applied to this itemstack
+	at org.bukkit.inventory.ItemStack.addEnchantment(ItemStack.java:394) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at vin.ash.skycube.listeners.AnvilListener.onPrepareAnvil(AnvilListener.java:37) ~[?:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_272]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_272]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_272]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_272]
+	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:315) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	... 28 more
+[17:19:28] [Server thread/ERROR]: Could not pass event PrepareAnvilEvent to SkyCube v1.4.6
+org.bukkit.event.EventException: null
+	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:319) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:70) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at org.bukkit.plugin.SimplePluginManager.fireEvent(SimplePluginManager.java:589) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:576) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at org.bukkit.craftbukkit.v1_16_R3.event.CraftEventFactory.callPrepareAnvilEvent(CraftEventFactory.java:1428) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.ContainerAnvil.e(ContainerAnvil.java:266) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.ContainerAnvilAbstract.a(ContainerAnvilAbstract.java:67) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.ContainerAnvilAbstract$1.update(ContainerAnvilAbstract.java:12) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.Slot.d(SourceFile:87) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.Slot.set(SourceFile:83) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.Container.a(Container.java:636) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.ContainerAnvilAbstract.shiftClick(ContainerAnvilAbstract.java:111) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.Container.b(Container.java:333) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.Container.a(Container.java:182) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.PlayerConnection.a(PlayerConnection.java:2283) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.PacketPlayInWindowClick.a(SourceFile:32) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.PacketPlayInWindowClick.a(SourceFile:10) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.PlayerConnectionUtils.lambda$0(PlayerConnectionUtils.java:19) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.TickTask.run(SourceFile:18) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.IAsyncTaskHandler.executeTask(SourceFile:144) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.IAsyncTaskHandlerReentrant.executeTask(SourceFile:23) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.IAsyncTaskHandler.executeNext(SourceFile:118) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.MinecraftServer.bb(MinecraftServer.java:941) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.MinecraftServer.executeNext(MinecraftServer.java:934) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.IAsyncTaskHandler.executeAll(SourceFile:103) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.MinecraftServer.sleepForTick(MinecraftServer.java:917) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.MinecraftServer.w(MinecraftServer.java:850) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.MinecraftServer.lambda$0(MinecraftServer.java:164) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_272]
+Caused by: java.lang.IllegalArgumentException: Specified enchantment cannot be applied to this itemstack
+	at org.bukkit.inventory.ItemStack.addEnchantment(ItemStack.java:394) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at vin.ash.skycube.listeners.AnvilListener.onPrepareAnvil(AnvilListener.java:37) ~[?:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_272]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_272]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_272]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_272]
+	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:315) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	... 28 more
+[17:19:28] [Server thread/ERROR]: Could not pass event PrepareAnvilEvent to SkyCube v1.4.6
+org.bukkit.event.EventException: null
+	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:319) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:70) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at org.bukkit.plugin.SimplePluginManager.fireEvent(SimplePluginManager.java:589) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:576) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at org.bukkit.craftbukkit.v1_16_R3.event.CraftEventFactory.callPrepareAnvilEvent(CraftEventFactory.java:1428) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.ContainerAnvil.e(ContainerAnvil.java:266) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.ContainerAnvilAbstract.a(ContainerAnvilAbstract.java:67) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.ContainerAnvilAbstract$1.update(ContainerAnvilAbstract.java:12) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.Slot.d(SourceFile:87) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.Container.a(Container.java:639) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.ContainerAnvilAbstract.shiftClick(ContainerAnvilAbstract.java:111) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.Container.b(Container.java:333) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.Container.a(Container.java:182) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.PlayerConnection.a(PlayerConnection.java:2283) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.PacketPlayInWindowClick.a(SourceFile:32) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.PacketPlayInWindowClick.a(SourceFile:10) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.PlayerConnectionUtils.lambda$0(PlayerConnectionUtils.java:19) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.TickTask.run(SourceFile:18) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.IAsyncTaskHandler.executeTask(SourceFile:144) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.IAsyncTaskHandlerReentrant.executeTask(SourceFile:23) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.IAsyncTaskHandler.executeNext(SourceFile:118) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.MinecraftServer.bb(MinecraftServer.java:941) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.MinecraftServer.executeNext(MinecraftServer.java:934) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.IAsyncTaskHandler.executeAll(SourceFile:103) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.MinecraftServer.sleepForTick(MinecraftServer.java:917) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.MinecraftServer.w(MinecraftServer.java:850) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.MinecraftServer.lambda$0(MinecraftServer.java:164) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_272]
+Caused by: java.lang.IllegalArgumentException: Specified enchantment cannot be applied to this itemstack
+	at org.bukkit.inventory.ItemStack.addEnchantment(ItemStack.java:394) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at vin.ash.skycube.listeners.AnvilListener.onPrepareAnvil(AnvilListener.java:37) ~[?:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_272]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_272]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_272]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_272]
+	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:315) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	... 27 more
+[17:19:33] [Server thread/ERROR]: Could not pass event PrepareAnvilEvent to SkyCube v1.4.6
+org.bukkit.event.EventException: null
+	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:319) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:70) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at org.bukkit.plugin.SimplePluginManager.fireEvent(SimplePluginManager.java:589) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:576) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at org.bukkit.craftbukkit.v1_16_R3.event.CraftEventFactory.callPrepareAnvilEvent(CraftEventFactory.java:1428) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.ContainerAnvil.e(ContainerAnvil.java:266) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.ContainerAnvilAbstract.a(ContainerAnvilAbstract.java:67) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.ContainerAnvilAbstract$1.update(ContainerAnvilAbstract.java:12) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.InventorySubcontainer.setItem(InventorySubcontainer.java:183) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.Slot.set(SourceFile:82) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.ContainerAnvilAbstract.shiftClick(ContainerAnvilAbstract.java:120) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.Container.b(Container.java:333) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.Container.a(Container.java:182) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.PlayerConnection.a(PlayerConnection.java:2283) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.PacketPlayInWindowClick.a(SourceFile:32) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.PacketPlayInWindowClick.a(SourceFile:10) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.PlayerConnectionUtils.lambda$0(PlayerConnectionUtils.java:19) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.TickTask.run(SourceFile:18) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.IAsyncTaskHandler.executeTask(SourceFile:144) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.IAsyncTaskHandlerReentrant.executeTask(SourceFile:23) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.IAsyncTaskHandler.executeNext(SourceFile:118) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.MinecraftServer.bb(MinecraftServer.java:941) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.MinecraftServer.executeNext(MinecraftServer.java:934) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.IAsyncTaskHandler.executeAll(SourceFile:103) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.MinecraftServer.sleepForTick(MinecraftServer.java:917) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.MinecraftServer.w(MinecraftServer.java:850) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.MinecraftServer.lambda$0(MinecraftServer.java:164) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_272]
+Caused by: java.lang.IllegalArgumentException: Specified enchantment cannot be applied to this itemstack
+	at org.bukkit.inventory.ItemStack.addEnchantment(ItemStack.java:394) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at vin.ash.skycube.listeners.AnvilListener.onPrepareAnvil(AnvilListener.java:37) ~[?:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_272]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_272]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_272]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_272]
+	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:315) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	... 27 more
+[17:19:33] [Server thread/ERROR]: Could not pass event PrepareAnvilEvent to SkyCube v1.4.6
+org.bukkit.event.EventException: null
+	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:319) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:70) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at org.bukkit.plugin.SimplePluginManager.fireEvent(SimplePluginManager.java:589) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:576) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at org.bukkit.craftbukkit.v1_16_R3.event.CraftEventFactory.callPrepareAnvilEvent(CraftEventFactory.java:1428) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.ContainerAnvil.e(ContainerAnvil.java:266) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.ContainerAnvilAbstract.a(ContainerAnvilAbstract.java:67) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.ContainerAnvilAbstract$1.update(ContainerAnvilAbstract.java:12) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.Slot.d(SourceFile:87) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.Slot.set(SourceFile:83) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.ContainerAnvilAbstract.shiftClick(ContainerAnvilAbstract.java:120) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.Container.b(Container.java:333) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.Container.a(Container.java:182) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.PlayerConnection.a(PlayerConnection.java:2283) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.PacketPlayInWindowClick.a(SourceFile:32) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.PacketPlayInWindowClick.a(SourceFile:10) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.PlayerConnectionUtils.lambda$0(PlayerConnectionUtils.java:19) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.TickTask.run(SourceFile:18) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.IAsyncTaskHandler.executeTask(SourceFile:144) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.IAsyncTaskHandlerReentrant.executeTask(SourceFile:23) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.IAsyncTaskHandler.executeNext(SourceFile:118) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.MinecraftServer.bb(MinecraftServer.java:941) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.MinecraftServer.executeNext(MinecraftServer.java:934) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.IAsyncTaskHandler.executeAll(SourceFile:103) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.MinecraftServer.sleepForTick(MinecraftServer.java:917) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.MinecraftServer.w(MinecraftServer.java:850) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.MinecraftServer.lambda$0(MinecraftServer.java:164) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_272]
+Caused by: java.lang.IllegalArgumentException: Specified enchantment cannot be applied to this itemstack
+	at org.bukkit.inventory.ItemStack.addEnchantment(ItemStack.java:394) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at vin.ash.skycube.listeners.AnvilListener.onPrepareAnvil(AnvilListener.java:37) ~[?:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_272]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_272]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_272]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_272]
+	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:315) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	... 27 more
+[17:19:33] [Server thread/ERROR]: Could not pass event PrepareAnvilEvent to SkyCube v1.4.6
+org.bukkit.event.EventException: null
+	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:319) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:70) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at org.bukkit.plugin.SimplePluginManager.fireEvent(SimplePluginManager.java:589) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:576) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at org.bukkit.craftbukkit.v1_16_R3.event.CraftEventFactory.callPrepareAnvilEvent(CraftEventFactory.java:1428) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.ContainerAnvil.e(ContainerAnvil.java:266) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.ContainerAnvilAbstract.a(ContainerAnvilAbstract.java:67) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.ContainerAnvilAbstract$1.update(ContainerAnvilAbstract.java:12) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.Slot.d(SourceFile:87) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.Slot.a(SourceFile:65) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.ContainerAnvilAbstract.shiftClick(ContainerAnvilAbstract.java:129) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.Container.b(Container.java:333) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.Container.a(Container.java:182) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.PlayerConnection.a(PlayerConnection.java:2283) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.PacketPlayInWindowClick.a(SourceFile:32) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.PacketPlayInWindowClick.a(SourceFile:10) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.PlayerConnectionUtils.lambda$0(PlayerConnectionUtils.java:19) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.TickTask.run(SourceFile:18) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.IAsyncTaskHandler.executeTask(SourceFile:144) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.IAsyncTaskHandlerReentrant.executeTask(SourceFile:23) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.IAsyncTaskHandler.executeNext(SourceFile:118) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.MinecraftServer.bb(MinecraftServer.java:941) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.MinecraftServer.executeNext(MinecraftServer.java:934) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.IAsyncTaskHandler.executeAll(SourceFile:103) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.MinecraftServer.sleepForTick(MinecraftServer.java:917) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.MinecraftServer.w(MinecraftServer.java:850) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at net.minecraft.server.v1_16_R3.MinecraftServer.lambda$0(MinecraftServer.java:164) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_272]
+Caused by: java.lang.IllegalArgumentException: Specified enchantment cannot be applied to this itemstack
+	at org.bukkit.inventory.ItemStack.addEnchantment(ItemStack.java:394) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	at vin.ash.skycube.listeners.AnvilListener.onPrepareAnvil(AnvilListener.java:37) ~[?:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_272]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_272]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_272]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_272]
+	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:315) ~[spigot_1.16.4.jar:git-Spigot-f011ca2-3af81c7]
+	... 27 more
+[17:19:46] [Server thread/INFO]: Saving the game (this may take a moment!)
+[17:19:47] [Server thread/INFO]: Saved the game
+[17:19:47] [Server thread/INFO]: Stopping the server
+[17:19:47] [Server thread/INFO]: Stopping server
+[17:19:47] [Server thread/INFO]: [GeneralServerPack] Disabling GeneralServerPack v1.0.3
+[17:19:47] [Server thread/INFO]: [VoidGenerator] Disabling VoidGenerator v1.7.0
+[17:19:47] [Server thread/INFO]: [SkyCube] Disabling SkyCube v1.4.6
+[17:19:47] [Server thread/INFO]: Saving players
+[17:19:47] [Server thread/INFO]: Asra_31 lost connection: Server closed
+[17:19:47] [Server thread/INFO]: Asra_31 left the game
+[17:19:47] [Server thread/INFO]: Saving worlds
+[17:19:47] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world_1607289592]'/minecraft:overworld
+[17:19:49] [Server thread/INFO]: ThreadedAnvilChunkStorage (world_1607289592): All chunks are saved
+[17:19:49] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world_1607289592_the_end]'/minecraft:the_end
+[17:19:49] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[17:19:49] [Server thread/INFO]: ThreadedAnvilChunkStorage (world_1607289592): All chunks are saved
+[17:19:49] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved

@@ -11,6 +11,7 @@ public class EnchantmentWrapper extends Enchantment{
 	private final int maxLvl;
 	private final EnchantmentTarget target;
 	private final int startLvl;
+	private final boolean compatable;
 	
 	public EnchantmentWrapper(String namespace, String name, int lvl) {
 		super(NamespacedKey.minecraft(namespace));
@@ -18,6 +19,7 @@ public class EnchantmentWrapper extends Enchantment{
 		this.maxLvl = lvl;
 		this.target = null;
 		this.startLvl = 0;
+		this.compatable = true;
 	}
 	
 	public EnchantmentWrapper(String namespace, String name, int lvl, EnchantmentTarget target) {
@@ -26,6 +28,7 @@ public class EnchantmentWrapper extends Enchantment{
 		this.maxLvl = lvl;
 		this.target = target;
 		this.startLvl = 0;
+		this.compatable = true;
 	}
 	
 	public EnchantmentWrapper(String namespace, String name, int lvl, EnchantmentTarget target, int startLvl) {
@@ -34,6 +37,16 @@ public class EnchantmentWrapper extends Enchantment{
 		this.maxLvl = lvl;
 		this.target = target;
 		this.startLvl = startLvl;
+		this.compatable = true;
+	}
+	
+	public EnchantmentWrapper(String namespace, String name, int lvl, EnchantmentTarget target, int startLvl, boolean compatable) {
+		super(NamespacedKey.minecraft(namespace));
+		this.name = name;
+		this.maxLvl = lvl;
+		this.target = target;
+		this.startLvl = startLvl;
+		this.compatable = compatable;
 	}
 
 	@Override
@@ -43,7 +56,7 @@ public class EnchantmentWrapper extends Enchantment{
 
 	@Override
 	public boolean conflictsWith(Enchantment arg0) {
-		return false;
+		return !compatable;
 	}
 
 	@Override

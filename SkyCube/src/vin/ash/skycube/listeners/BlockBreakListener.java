@@ -30,8 +30,6 @@ public class BlockBreakListener implements Listener{
 		Player p = e.getPlayer();
 		if(p.getInventory().getItemInMainHand() == null)
 			return;
-		if(!p.getInventory().getItemInMainHand().hasItemMeta())
-			return;
 		if(!p.getInventory().getItemInMainHand().getItemMeta().hasEnchant(CustomEnchants.TRANSMUTATION))
 			return;
 		if(p.getGameMode() != GameMode.SURVIVAL)
