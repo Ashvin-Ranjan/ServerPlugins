@@ -22,32 +22,23 @@ public class AnvilListener implements Listener{
 	
 	@EventHandler
 	public void onInventoryClick(InventoryClickEvent e) {
-		System.out.println("Test8");
 		if (e.getCurrentItem() == null)
 			return;
-		System.out.println("Test7");
 		if (e.getInventory().getType() != InventoryType.ANVIL)
 			return;
-		System.out.println("Test6");
 		AnvilInventory inv = (AnvilInventory) e.getInventory();
 		if (inv.isEmpty())
 			return;
-		System.out.println("Test5");
 		if (inv.getItem(0) == null)
 			return;
-		System.out.println("Test");
 		if (!inv.getItem(0).hasItemMeta())
 			return;
-		System.out.println("Test4");
 		if (!inv.getItem(0).getItemMeta().hasEnchant(CustomEnchants.TRANSMUTATION))
 			return;
-		System.out.println("Test3");
 		if (e.getResult() == null)
 			return;
-		System.out.println("Test2");
 		if(e.getSlotType() != InventoryType.SlotType.RESULT)
 			return;
-		System.out.println("Test1");
 		ItemStack item = e.getCurrentItem();
 		
 		try {
