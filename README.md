@@ -11,6 +11,11 @@ An entire game mode in it of itself, skycube is a game where players start out i
 - The bottom layer is infinatly regenerating stone
 
 The rest is in the book given to new players or by using `/helpme`
+
+### Commands
+- `helpme`: Gives the player the starting book and registers every recipe.
+- `tpr [request|accept] (playername)`: sends a request to the player in question to be teleported to their island or if it is `accept` then it accepts the request
+
 ### config.yml
 The config for this is very simple
 - `messageJoin_first`: This is for when a new player joins
@@ -25,6 +30,7 @@ The config for this is very simple
 - `registerMinHeight`: Boolean to register a min height (if the player goes below this they die) this may take up a lot of server processing power if it is big.
 - `minHeight`: The min height for the players to be at, only needed if `registerMinHeight` is true
 - `minDistAway`: The minimum distance away from other players a player needs to spawn from
+- `allowTeleport`: Allows for the `tpr` command to be used
 
 Here is my default config.yml
 ```
@@ -46,6 +52,8 @@ registerMinHeight: true
 minHeight: 4
 
 minDistAway: 10
+
+allowTeleport: true
 ```
 
 ### The starting book pages

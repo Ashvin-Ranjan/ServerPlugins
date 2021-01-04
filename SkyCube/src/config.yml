@@ -12,7 +12,9 @@ startBook_author: 'Asra_31'
 startBook_title: 'Introduction to Sky Cube!'
 startBook_pages: 'book'
 
-registerMinHeight: true
+registerMinHeight: false
 minHeight: 4
 
 minDistAway: 10
+
+allowTeleport: true

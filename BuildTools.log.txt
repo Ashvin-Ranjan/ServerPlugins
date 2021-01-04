@@ -1,0 +1,98 @@
+Loading BuildTools version: git-BuildTools-7fe9375-122 (#122)
+Java Version: Java 8
+Current Path: C:\Users\Ashvin Ranjan\Desktop\Plugins\.
+git version 2.29.2.windows.3
+Ash Ranjan
+ranjanashvin@gmail.com
+Starting clone of https://hub.spigotmc.org/stash/scm/spigot/builddata.git to BuildData
+Cloned git repository https://hub.spigotmc.org/stash/scm/spigot/builddata.git to C:\Users\Ashvin Ranjan\Desktop\Plugins\BuildData. Current HEAD: 501ea060743c7bba4436878207e4f1232298efce
+Exception in thread "main" org.eclipse.jgit.errors.RepositoryNotFoundException: repository not found: C:\Users\Ashvin Ranjan\Desktop\Plugins\Bukkit
+	at org.eclipse.jgit.lib.BaseRepositoryBuilder.build(BaseRepositoryBuilder.java:585)
+	at org.eclipse.jgit.api.Git.open(Git.java:93)
+	at org.eclipse.jgit.api.Git.open(Git.java:73)
+	at org.spigotmc.builder.Builder.main(Builder.java:301)
+	at org.spigotmc.builder.Bootstrap.main(Bootstrap.java:34)
+va:34)
+74aa361b987231473fbbed20e83586d542c691ace1139026f232bd46fdcce5e8887f528ab1c3fbfc1b2adec90518b6941235952d3868e9
+Extracted: .\apache-maven-3.6.0\README.txt
+Extracted: .\apache-maven-3.6.0\lib\org.eclipse.sisu.plexus.license
+Extracted: .\apache-maven-3.6.0\lib\jansi-native\windows32\jansi.dll
+Extracted: .\apache-maven-3.6.0\bin\mvnDebug.cmd
+Extracted: .\apache-maven-3.6.0\lib\ext\README.txt
+Extracted: .\apache-maven-3.6.0\lib\plexus-interpolation-1.25.jar
+Extracted: .\apache-maven-3.6.0\lib\maven-plugin-api-3.6.0.jar
+Extracted: .\apache-maven-3.6.0\lib\jsr250-api-1.0.jar
+Extracted: .\apache-maven-3.6.0\lib\javax.inject-1.jar
+Extracted: .\apache-maven-3.6.0\lib\maven-model-builder-3.6.0.jar
+Extracted: .\apache-maven-3.6.0\lib\aopalliance-1.0.jar
+Extracted: .\apache-maven-3.6.0\lib\jsr305-3.0.2.jar
+Extracted: .\apache-maven-3.6.0\lib\error_prone_annotations-2.1.3.jar
+Extracted: .\apache-maven-3.6.0\lib\j2objc-annotations-1.1.jar
+Extracted: .\apache-maven-3.6.0\lib\maven-compat-3.6.0.jar
+Extracted: .\apache-maven-3.6.0\LICENSE
+Extracted: .\apache-maven-3.6.0\lib\jansi-native\freebsd32\libjansi.so
+Extracted: .\apache-maven-3.6.0\conf\logging\simplelogger.properties
+Extracted: .\apache-maven-3.6.0\lib\plexus-utils-3.1.0.jar
+Extracted: .\apache-maven-3.6.0\lib\maven-resolver-util-1.3.1.jar
+Extracted: .\apache-maven-3.6.0\lib\guice-4.2.1-no_aop.jar
+Extracted: .\apache-maven-3.6.0\NOTICE
+Extracted: .\apache-maven-3.6.0\lib\slf4j-api.license
+Extracted: .\apache-maven-3.6.0\lib\jansi-native\osx\libjansi.jnilib
+Extracted: .\apache-maven-3.6.0\bin\mvn.cmd
+Extracted: .\apache-maven-3.6.0\lib\jansi-native\README.txt
+Extracted: .\apache-maven-3.6.0\lib\maven-resolver-provider-3.6.0.jar
+Extracted: .\apache-maven-3.6.0\lib\maven-resolver-spi-1.3.1.jar
+Extracted: .\apache-maven-3.6.0\lib\maven-resolver-impl-1.3.1.jar
+Extracted: .\apache-maven-3.6.0\lib\guava-25.1-android.jar
+Extracted: .\apache-maven-3.6.0\lib\animal-sniffer-annotations.license
+Extracted: .\apache-maven-3.6.0\lib\jansi-native\freebsd64\libjansi.so
+Extracted: .\apache-maven-3.6.0\conf\settings.xml
+Extracted: .\apache-maven-3.6.0\lib\maven-builder-support-3.6.0.jar
+Extracted: .\apache-maven-3.6.0\lib\plexus-component-annotations-1.7.1.jar
+Extracted: .\apache-maven-3.6.0\lib\plexus-sec-dispatcher-1.4.jar
+Extracted: .\apache-maven-3.6.0\lib\maven-model-3.6.0.jar
+Extracted: .\apache-maven-3.6.0\lib\maven-resolver-api-1.3.1.jar
+Extracted: .\apache-maven-3.6.0\lib\commons-io-2.5.jar
+Extracted: .\apache-maven-3.6.0\lib\wagon-http-3.2.0-shaded.jar
+Extracted: .\apache-maven-3.6.0\lib\checker-compat-qual.license
+Extracted: .\apache-maven-3.6.0\lib\jansi-native\linux32\libjansi.so
+Extracted: .\apache-maven-3.6.0\bin\mvnDebug
+Extracted: .\apache-maven-3.6.0\boot\plexus-classworlds-2.5.2.jar
+Extracted: .\apache-maven-3.6.0\lib\maven-repository-metadata-3.6.0.jar
+Extracted: .\apache-maven-3.6.0\lib\commons-lang3-3.8.1.jar
+Extracted: .\apache-maven-3.6.0\lib\maven-resolver-connector-basic-1.3.1.jar
+Extracted: .\apache-maven-3.6.0\lib\jsr250-api.license
+Extracted: .\apache-maven-3.6.0\lib\jansi-native\windows64\jansi.dll
+Extracted: .\apache-maven-3.6.0\bin\mvn
+Extracted: .\apache-maven-3.6.0\lib\maven-embedder-3.6.0.jar
+Extracted: .\apache-maven-3.6.0\lib\org.eclipse.sisu.plexus-0.3.3.jar
+Extracted: .\apache-maven-3.6.0\lib\slf4j-api-1.7.25.jar
+Extracted: .\apache-maven-3.6.0\lib\maven-shared-utils-3.2.1.jar
+Extracted: .\apache-maven-3.6.0\lib\checker-compat-qual-2.0.0.jar
+Extracted: .\apache-maven-3.6.0\lib\animal-sniffer-annotations-1.14.jar
+Extracted: .\apache-maven-3.6.0\lib\wagon-provider-api-3.2.0.jar
+Extracted: .\apache-maven-3.6.0\lib\wagon-file-3.2.0.jar
+Extracted: .\apache-maven-3.6.0\lib\maven-resolver-transport-wagon-1.3.1.jar
+Extracted: .\apache-maven-3.6.0\lib\jansi-1.17.1.jar
+Extracted: .\apache-maven-3.6.0\lib\jcl-over-slf4j.license
+Extracted: .\apache-maven-3.6.0\lib\jansi-native\linux64\libjansi.so
+Extracted: .\apache-maven-3.6.0\bin\mvnyjp
+Extracted: .\apache-maven-3.6.0\lib\maven-settings-3.6.0.jar
+Extracted: .\apache-maven-3.6.0\lib\maven-core-3.6.0.jar
+Extracted: .\apache-maven-3.6.0\lib\org.eclipse.sisu.inject.license
+Extracted: .\apache-maven-3.6.0\bin\m2.conf
+Extracted: .\apache-maven-3.6.0\conf\toolchains.xml
+Extracted: .\apache-maven-3.6.0\lib\maven-settings-builder-3.6.0.jar
+Extracted: .\apache-maven-3.6.0\lib\plexus-cipher-1.7.jar
+Extracted: .\apache-maven-3.6.0\lib\maven-artifact-3.6.0.jar
+Extracted: .\apache-maven-3.6.0\lib\cdi-api-1.0.jar
+Extracted: .\apache-maven-3.6.0\lib\org.eclipse.sisu.inject-0.3.3.jar
+Extracted: .\apache-maven-3.6.0\lib\commons-cli-1.4.jar
+Extracted: .\apache-maven-3.6.0\lib\jcl-over-slf4j-1.7.25.jar
+Extracted: .\apache-maven-3.6.0\lib\maven-slf4j-provider-3.6.0.jar
+Exception in thread "main" org.eclipse.jgit.errors.RepositoryNotFoundException: repository not found: C:\Users\Ashvin Ranjan\Desktop\Plugins\Bukkit
+	at org.eclipse.jgit.lib.BaseRepositoryBuilder.build(BaseRepositoryBuilder.java:585)
+	at org.eclipse.jgit.api.Git.open(Git.java:93)
+	at org.eclipse.jgit.api.Git.open(Git.java:73)
+	at org.spigotmc.builder.Builder.main(Builder.java:301)
+	at org.spigotmc.builder.Bootstrap.main(Bootstrap.java:34)
