@@ -62,7 +62,7 @@ Enter is a newline, and to seperate pages you use ~, recommended book pages text
 &khi&r &lWelcome to Sky Cube&r &khi&r
 This is your island and your home for a long, long time.
 Your starting island is composed of 3 layers
-- The lop layer is logs
+- The top layer is logs
 - The middle layer is grass
 - And the bottom layer is infinitely regenerating cobblestone
 ~&khi&r &lStarting off&r &khi&r
@@ -84,17 +84,9 @@ Here is the list of the elements in order:
 - Lapis
 - Diamond
 - Emerald (No Transmutation)
-Continued on next page
 ~&khi&r &lTransmutation Continued&r &khi&r
 To get these materials faster you may want to get transmutation on your items, which changes cobblestone to the material
-This is done by surrounding the corresponding pickaxe with the material, here is the list of the pickaxes
-~&khi&r &lTransmutation Continued&r &khi&r
-- Coal: Stone Pickaxe
-- Iron: Iron Pickaxe
-- Gold: Iron Pickaxe
-- Redstone: Iron Pickaxe
-- Lapis: Iron Pickaxe
-- Diamond: Diamond Pickaxe
+This is done by surrounding a pickaxe with the material.
 Remember to keep a regular pickaxe just in case!
 ~&khi&r &lFarming&r &khi&r
 To start off farming you will need to turn some of your planks into bonemeal

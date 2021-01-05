@@ -17,139 +17,81 @@ import vin.ash.skycube.enchants.CustomEnchants;
 public class TransmutationRecipes {
 	Main plugin;
 	
+	private static final Material[] PICKAXES = {
+			Material.STONE_PICKAXE,
+			Material.IRON_PICKAXE,
+			Material.GOLDEN_PICKAXE,
+			Material.DIAMOND_PICKAXE
+	};
+	private static final Material[] VALUES = {
+			Material.COAL,
+			Material.IRON_INGOT,
+			Material.GOLD_INGOT,
+			Material.REDSTONE,
+			Material.LAPIS_LAZULI,
+			Material.DIAMOND
+	};
+	
 	public TransmutationRecipes(Main pl) {
 		this.plugin = pl;
-		Bukkit.addRecipe(this.coalTransmutationRecipe());
-		Bukkit.addRecipe(this.ironTransmutationRecipe());
-		Bukkit.addRecipe(this.goldTransmutationRecipe());
-		Bukkit.addRecipe(this.redstoneTransmutationRecipe());
-		Bukkit.addRecipe(this.lapisTransmutationRecipe());
-		Bukkit.addRecipe(this.diamondTransmutationRecipe());
+
+		for(int i = 0; i < VALUES.length; i++)
+		{
+			for(Material pick: PICKAXES)
+			{
+				Bukkit.addRecipe(pickaxeRecipe(pick, VALUES[i], i + 1));
+			}
+		}
 	}
 	
-	public ShapedRecipe coalTransmutationRecipe() {
-		ItemStack item = new ItemStack(Material.STONE_PICKAXE);
+	public String roman(int level)
+	{
+		switch(level) {
+			case 1:
+				return "I";
+			case 2:
+				return "II";
+			case 3:
+				return "III";
+			case 4:
+				return "IV";
+			case 5:
+				return "V";
+			case 6:
+				return "VI";
+			
+		}
+		return "null";
+	}
+	
+	public ShapedRecipe pickaxeRecipe(Material pick, Material val, int level)
+	{
+		ItemStack item = new ItemStack(pick);
 		ItemMeta meta = item.getItemMeta();
-		meta.addEnchant(CustomEnchants.TRANSMUTATION, 1, false);
+		meta.addEnchant(CustomEnchants.TRANSMUTATION, level, false);
 		List<String> lore = new ArrayList<String>();
-		lore.add(ChatColor.BLUE + "Transmutation I" + ChatColor.RESET);
+		lore.add(ChatColor.BLUE + "Transmutation " + roman(level) + ChatColor.RESET);
 		meta.setLore(lore);
 		item.setItemMeta(meta);
 		
-		NamespacedKey key = new NamespacedKey(plugin, "stone_pickaxe");
+		NamespacedKey key = new NamespacedKey(plugin, pick.name());
+		int index = 0;
+		do {
+			if(index == 0)
+				key = new NamespacedKey(plugin, pick.name());
+			else
+				key = new NamespacedKey(plugin, pick.name() + index);
+			index++;
+		} while (Bukkit.getRecipe(key) != null);
 		
 		ShapedRecipe recipe = new ShapedRecipe(key, item);
 		
-		recipe.shape("CCC", "CPC", "CCC");
+		recipe.shape("VVV", "VPV", "VVV");
 		
-		recipe.setIngredient('C', Material.COAL);
-		recipe.setIngredient('P', Material.STONE_PICKAXE);
+		recipe.setIngredient('V', val);
+		recipe.setIngredient('P', pick);
 		
 		return recipe;
 	}
 	
-	public ShapedRecipe ironTransmutationRecipe() {
-		ItemStack item = new ItemStack(Material.IRON_PICKAXE);
-		ItemMeta meta = item.getItemMeta();
-		meta.addEnchant(CustomEnchants.TRANSMUTATION, 2, false);
-		List<String> lore = new ArrayList<String>();
-		lore.add(ChatColor.BLUE + "Transmutation II" + ChatColor.RESET);
-		meta.setLore(lore);
-		item.setItemMeta(meta);
-		
-		NamespacedKey key = new NamespacedKey(plugin, "iron_pickaxe");
-		
-		ShapedRecipe recipe = new ShapedRecipe(key, item);
-		
-		recipe.shape("III", "IPI", "III");
-		
-		recipe.setIngredient('I', Material.IRON_INGOT);
-		recipe.setIngredient('P', Material.IRON_PICKAXE);
-		
-		return recipe;
-	}
-	
-	public ShapedRecipe goldTransmutationRecipe() {
-		ItemStack item = new ItemStack(Material.IRON_PICKAXE);
-		ItemMeta meta = item.getItemMeta();
-		meta.addEnchant(CustomEnchants.TRANSMUTATION, 3, false);
-		List<String> lore = new ArrayList<String>();
-		lore.add(ChatColor.BLUE + "Transmutation III" + ChatColor.RESET);
-		meta.setLore(lore);
-		item.setItemMeta(meta);
-		
-		NamespacedKey key = new NamespacedKey(plugin, "gold_pickaxe");
-		
-		ShapedRecipe recipe = new ShapedRecipe(key, item);
-		
-		recipe.shape("III", "IPI", "III");
-		
-		recipe.setIngredient('I', Material.GOLD_INGOT);
-		recipe.setIngredient('P', Material.IRON_PICKAXE);
-		
-		return recipe;
-	}
-	
-	public ShapedRecipe redstoneTransmutationRecipe() {
-		ItemStack item = new ItemStack(Material.IRON_PICKAXE);
-		ItemMeta meta = item.getItemMeta();
-		meta.addEnchant(CustomEnchants.TRANSMUTATION, 4, false);
-		List<String> lore = new ArrayList<String>();
-		lore.add(ChatColor.BLUE + "Transmutation IV" + ChatColor.RESET);
-		meta.setLore(lore);
-		item.setItemMeta(meta);
-		
-		NamespacedKey key = new NamespacedKey(plugin, "redstone_pickaxe");
-		
-		ShapedRecipe recipe = new ShapedRecipe(key, item);
-		
-		recipe.shape("RRR", "RPR", "RRR");
-		
-		recipe.setIngredient('R', Material.REDSTONE);
-		recipe.setIngredient('P', Material.IRON_PICKAXE);
-		
-		return recipe;
-	}
-	
-	public ShapedRecipe lapisTransmutationRecipe() {
-		ItemStack item = new ItemStack(Material.IRON_PICKAXE);
-		ItemMeta meta = item.getItemMeta();
-		meta.addEnchant(CustomEnchants.TRANSMUTATION, 5, false);
-		List<String> lore = new ArrayList<String>();
-		lore.add(ChatColor.BLUE + "Transmutation V" + ChatColor.RESET);
-		meta.setLore(lore);
-		item.setItemMeta(meta);
-		
-		NamespacedKey key = new NamespacedKey(plugin, "lapis_pickaxe");
-		
-		ShapedRecipe recipe = new ShapedRecipe(key, item);
-		
-		recipe.shape("LLL", "LPL", "LLL");
-		
-		recipe.setIngredient('L', Material.LAPIS_LAZULI);
-		recipe.setIngredient('P', Material.IRON_PICKAXE);
-		
-		return recipe;
-	}
-	
-	public ShapedRecipe diamondTransmutationRecipe() {
-		ItemStack item = new ItemStack(Material.DIAMOND_PICKAXE);
-		ItemMeta meta = item.getItemMeta();
-		meta.addEnchant(CustomEnchants.TRANSMUTATION, 6, false);
-		List<String> lore = new ArrayList<String>();
-		lore.add(ChatColor.BLUE + "Transmutation VI" + ChatColor.RESET);
-		meta.setLore(lore);
-		item.setItemMeta(meta);
-		
-		NamespacedKey key = new NamespacedKey(plugin, "diamond_pickaxe");
-		
-		ShapedRecipe recipe = new ShapedRecipe(key, item);
-		
-		recipe.shape("DDD", "DPD", "DDD");
-		
-		recipe.setIngredient('D', Material.DIAMOND);
-		recipe.setIngredient('P', Material.DIAMOND_PICKAXE);
-		
-		return recipe;
-	}
 }

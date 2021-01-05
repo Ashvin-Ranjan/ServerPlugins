@@ -66,6 +66,8 @@ public class JoinListener implements Listener{
 		} else {
 			e.setJoinMessage(Utils.chat(plugin.getConfig().getString("messageJoin_default").replace("<player>", p.getName())));
 		}
+		
+		Utils.playerQuickStart(p, plugin, false);
 	}
 	
 	boolean awayFromPlayers(Location l) {

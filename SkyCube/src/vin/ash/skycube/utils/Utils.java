@@ -210,4 +210,49 @@ public class Utils {
 		}
 	}
 	
+	public static void playerQuickStart(Player p, Main plugin, boolean give) {
+		Iterator<Recipe> recipes = Bukkit.recipeIterator();
+		while(recipes.hasNext()) {
+			try {
+				Recipe recipe = recipes.next();
+				if(recipe instanceof ShapedRecipe){
+					p.discoverRecipe(((ShapedRecipe) recipe).getKey());
+				}
+				else if(recipe instanceof ShapelessRecipe) {
+					p.discoverRecipe(((ShapelessRecipe) recipe).getKey());
+				}
+			} catch (Exception e) {}
+		}
+		File file = new File(plugin.getDataFolder(), plugin.getConfig().getString("startBook_pages") + ".txt");
+		if(!file.exists() || !give) {
+			return;
+		} else {
+			try {
+				Scanner reader;
+				reader = new Scanner(file);
+		    	List<String> out = new ArrayList<String>();
+		    	String outraw = "";
+		        while (reader.hasNextLine()) {
+		          outraw += reader.nextLine() + "\n";
+		        }
+		        reader.close();
+		        
+		        out = Arrays.asList(outraw.split("~"));
+				
+				ItemStack book = new ItemStack(Material.WRITTEN_BOOK);
+				BookMeta bm = (BookMeta) book.getItemMeta();
+				bm.setTitle("Help book");
+				bm.setAuthor(chat(plugin.getConfig().getString("startBook_author")));
+				bm.setTitle(chat(plugin.getConfig().getString("startBook_title")));
+				bm.setPages(chat(out));
+				book.setItemMeta(bm);
+
+		        p.getInventory().addItem(book);
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+				return;
+			}
+		}
+	}
+	
 }
