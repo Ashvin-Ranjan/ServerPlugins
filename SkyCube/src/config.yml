@@ -18,3 +18,4 @@ minHeight: 4
 minDistAway: 10
 
 allowTeleport: true
+allowBack: true

@@ -2,6 +2,7 @@ package vin.ash.skycube;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
+import vin.ash.skycube.commands.BackCommand;
 import vin.ash.skycube.commands.HelpCommand;
 import vin.ash.skycube.commands.TeleportCommand;
 import vin.ash.skycube.enchants.CustomEnchants;
@@ -41,6 +42,7 @@ public class Main extends JavaPlugin{
 		
 		new HelpCommand(this);
 		new TeleportCommand(this);
+		new BackCommand(this);
 		
 		CustomEnchants.register(CustomEnchants.TRANSMUTATION);
 	}

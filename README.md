@@ -14,7 +14,8 @@ The rest is in the book given to new players or by using `/helpme`
 
 ### Commands
 - `helpme`: Gives the player the starting book and registers every recipe.
-- `tpr [request|accept] (playername)`: sends a request to the player in question to be teleported to their island or if it is `accept` then it accepts the request
+- `tpr [request|accept] (playername)`: Sends a request to the player in question to be teleported to their island or if it is `accept` then it accepts the request.
+- `back`: Teleports the player back to their island, it does not reset their velocity so they may die if they are falling.
 
 ### config.yml
 The config for this is very simple
@@ -31,6 +32,7 @@ The config for this is very simple
 - `minHeight`: The min height for the players to be at, only needed if `registerMinHeight` is true
 - `minDistAway`: The minimum distance away from other players a player needs to spawn from
 - `allowTeleport`: Allows for the `tpr` command to be used
+- `allowBack`: Allows for the `back` command to be used
 
 Here is my default config.yml
 ```
@@ -54,6 +56,7 @@ minHeight: 4
 minDistAway: 10
 
 allowTeleport: true
+allowBack: true
 ```
 
 ### The starting book pages
