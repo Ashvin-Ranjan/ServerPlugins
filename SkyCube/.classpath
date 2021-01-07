@@ -6,7 +6,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="C:/Users/Ashvin Ranjan/Desktop/Plugins/spigot-1.16.4.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Ashvin Ranjan/Desktop/Plugins/BuildTools.jar"/>
+	<classpathentry kind="lib" path="../spigot-1.16.4.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
