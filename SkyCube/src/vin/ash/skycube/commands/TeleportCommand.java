@@ -87,7 +87,7 @@ public class TeleportCommand implements CommandExecutor{
 			message.setColor(net.md_5.bungee.api.ChatColor.GREEN);
 			message.setClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/tpr accept " + p.getName()));
 			message.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new Text("/tpr accept " + p.getName())));
-			requests.add(new TeleportRequest(sendto, p));
+			requests.add(new TeleportRequest(p, sendto));
 			sendto.spigot().sendMessage(message);
 			p.sendMessage(ChatColor.GREEN + "Your request has been sent!" + ChatColor.RESET);
 		} else if (args[0].equals("accept"))
@@ -95,7 +95,7 @@ public class TeleportCommand implements CommandExecutor{
 			for(int i = 0; i < requests.size(); i++)
 			{
 				TeleportRequest request = requests.get(i);
-				if (request.isValid() && request.getFrom().getUniqueId() == p.getUniqueId() && request.getTo().getUniqueId() == sendto.getUniqueId())
+				if (request.isValid() && request.getTo().getUniqueId() == p.getUniqueId() && request.getFrom().getUniqueId() == sendto.getUniqueId())
 				{
 					File file = new File(plugin.getDataFolder(), plugin.getConfig().getString("spawn_file") + ".json");
 					JSONObject playerspawn = new JSONObject();
