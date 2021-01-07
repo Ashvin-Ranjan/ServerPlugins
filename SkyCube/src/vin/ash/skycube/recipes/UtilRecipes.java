@@ -77,6 +77,8 @@ public class UtilRecipes {
 		Utils.registerSimpleRecipe(new ItemStack(Material.STRING, 4), Material.WHITE_WOOL, pl);
 
 		Bukkit.addRecipe(bottleOEnchantingRecipe());
+
+		Bukkit.addRecipe(tridentRecipe());
 	}
 	
 	public ShapedRecipe iceRecipe() {
@@ -89,6 +91,20 @@ public class UtilRecipes {
 		recipe.shape("SS", "SS");
 		
 		recipe.setIngredient('S', Material.SNOW_BLOCK);
+		
+		return recipe;
+	}
+	
+	public ShapedRecipe tridentRecipe() {
+		ItemStack item = new ItemStack(Material.TRIDENT);
+		
+		NamespacedKey key = new NamespacedKey(plugin, "trident");
+		
+		ShapedRecipe recipe = new ShapedRecipe(key, item);
+		
+		recipe.shape("RRR", " R ", " R ");
+		
+		recipe.setIngredient('R', Material.BLAZE_ROD);
 		
 		return recipe;
 	}

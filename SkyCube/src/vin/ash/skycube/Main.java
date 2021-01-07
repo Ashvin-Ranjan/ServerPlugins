@@ -2,8 +2,11 @@ package vin.ash.skycube;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
+import vin.ash.skycube.commands.BackCommand;
 import vin.ash.skycube.commands.HelpCommand;
+import vin.ash.skycube.commands.TeleportCommand;
 import vin.ash.skycube.enchants.CustomEnchants;
+import vin.ash.skycube.listeners.AnvilListener;
 import vin.ash.skycube.listeners.BlockBreakListener;
 import vin.ash.skycube.listeners.JoinListener;
 import vin.ash.skycube.listeners.PlayerMoveListener;
@@ -27,6 +30,7 @@ public class Main extends JavaPlugin{
 		new JoinListener(this);
 		new BlockBreakListener(this);
 		new PlayerMoveListener(this);
+		new AnvilListener(this);
 		
 		new ItemRecipes(this);
 		new UtilRecipes(this);
@@ -37,6 +41,8 @@ public class Main extends JavaPlugin{
 		new EndRecipes(this);
 		
 		new HelpCommand(this);
+		new TeleportCommand(this);
+		new BackCommand(this);
 		
 		CustomEnchants.register(CustomEnchants.TRANSMUTATION);
 	}

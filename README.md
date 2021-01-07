@@ -11,6 +11,12 @@ An entire game mode in it of itself, skycube is a game where players start out i
 - The bottom layer is infinatly regenerating stone
 
 The rest is in the book given to new players or by using `/helpme`
+
+### Commands
+- `helpme`: Gives the player the starting book and registers every recipe.
+- `tpr [request|accept] (playername)`: Sends a request to the player in question to be teleported to their island or if it is `accept` then it accepts the request.
+- `back`: Teleports the player back to their island, it does not reset their velocity so they may die if they are falling.
+
 ### config.yml
 The config for this is very simple
 - `messageJoin_first`: This is for when a new player joins
@@ -25,6 +31,8 @@ The config for this is very simple
 - `registerMinHeight`: Boolean to register a min height (if the player goes below this they die) this may take up a lot of server processing power if it is big.
 - `minHeight`: The min height for the players to be at, only needed if `registerMinHeight` is true
 - `minDistAway`: The minimum distance away from other players a player needs to spawn from
+- `allowTeleport`: Allows for the `tpr` command to be used
+- `allowBack`: Allows for the `back` command to be used
 
 Here is my default config.yml
 ```
@@ -46,6 +54,9 @@ registerMinHeight: true
 minHeight: 4
 
 minDistAway: 10
+
+allowTeleport: true
+allowBack: true
 ```
 
 ### The starting book pages
@@ -54,7 +65,7 @@ Enter is a newline, and to seperate pages you use ~, recommended book pages text
 &khi&r &lWelcome to Sky Cube&r &khi&r
 This is your island and your home for a long, long time.
 Your starting island is composed of 3 layers
-- The lop layer is logs
+- The top layer is logs
 - The middle layer is grass
 - And the bottom layer is infinitely regenerating cobblestone
 ~&khi&r &lStarting off&r &khi&r
@@ -76,17 +87,9 @@ Here is the list of the elements in order:
 - Lapis
 - Diamond
 - Emerald (No Transmutation)
-Continued on next page
 ~&khi&r &lTransmutation Continued&r &khi&r
 To get these materials faster you may want to get transmutation on your items, which changes cobblestone to the material
-This is done by surrounding the corresponding pickaxe with the material, here is the list of the pickaxes
-~&khi&r &lTransmutation Continued&r &khi&r
-- Coal: Stone Pickaxe
-- Iron: Iron Pickaxe
-- Gold: Iron Pickaxe
-- Redstone: Iron Pickaxe
-- Lapis: Iron Pickaxe
-- Diamond: Diamond Pickaxe
+This is done by surrounding a pickaxe with the material.
 Remember to keep a regular pickaxe just in case!
 ~&khi&r &lFarming&r &khi&r
 To start off farming you will need to turn some of your planks into bonemeal
