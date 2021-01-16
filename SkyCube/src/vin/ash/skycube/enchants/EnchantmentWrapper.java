@@ -51,7 +51,7 @@ public class EnchantmentWrapper extends Enchantment{
 
 	@Override
 	public boolean canEnchantItem(ItemStack arg0) {
-		return false;
+		return true;
 	}
 
 	@Override
