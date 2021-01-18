@@ -16,7 +16,7 @@ public class SpawnEggRecipes {
 		this.plugin = pl;
 		
 		Utils.registerCubeRecipe(Material.CHICKEN_SPAWN_EGG, Material.WHEAT_SEEDS, pl);
-		Utils.registerSimpleRecipe(Material.COW_SPAWN_EGG, Material.HAY_BLOCK, pl);
+		Utils.registerXRecipe(Material.COW_SPAWN_EGG, Material.WHEAT, Material.WHEAT_SEEDS, pl);
 		Utils.registerCubeRecipe(Material.SHEEP_SPAWN_EGG, Material.HAY_BLOCK, pl);
 		Utils.registerCubeRecipe(Material.COD_SPAWN_EGG, Material.BONE, pl);
 		Utils.registerCubeRecipe(Material.MOOSHROOM_SPAWN_EGG, Material.RED_MUSHROOM, pl);
