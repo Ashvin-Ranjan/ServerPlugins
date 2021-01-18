@@ -12,7 +12,6 @@ public class CustomEnchants {
 	
 	public static void register(Enchantment e) {
 		boolean registered = Arrays.stream(Enchantment.values()).collect(Collectors.toList()).contains(e);
-		System.out.println("register: " + registered);
 		if (!registered)
 			registerEnchantment(e);
 	}
