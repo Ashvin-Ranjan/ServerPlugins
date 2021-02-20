@@ -1,0 +1,7 @@
+name: DonationCommands
+main: vin.ash.donationcommands.Main
+author: Asra
+version: 0.1.0
+description: A plugin that connects to streamlabs and runs commands based on donations
+api-version: 1.16
+api: [4.0.0]

@@ -22,9 +22,12 @@ public class NetherRecipes {
 		Utils.registerSimpleRecipe(Material.NETHER_BRICK, Material.BRICK, Material.NETHER_WART, pl);
 		Utils.registerXRecipe(Material.ANCIENT_DEBRIS, Material.DIAMOND_BLOCK, Material.GOLD_BLOCK, pl);
 		Utils.registerXRecipe(Material.NETHER_QUARTZ_ORE, Material.NETHERRACK, Material.WHITE_DYE, pl);
+		Utils.registerXRecipe(Material.PIGLIN_BANNER_PATTERN, Material.PORKCHOP, Material.PAPER, pl);
 		Bukkit.addRecipe(blazeRodRecipe());
 		Bukkit.addRecipe(netherStarRecipe());
 		Bukkit.addRecipe(glowstoneRecipe());
+		Bukkit.addRecipe(pigstepRecipe());
+		Bukkit.addRecipe(ghastTearRecipe());
 	}
 	
 	private ShapedRecipe glowstoneRecipe() {
@@ -38,6 +41,36 @@ public class NetherRecipes {
 		
 		recipe.setIngredient('G', Material.GLASS);
 		recipe.setIngredient('T', Material.TORCH);
+		
+		return recipe;
+	}
+	
+	private ShapedRecipe pigstepRecipe() {
+		ItemStack item = new ItemStack(Material.MUSIC_DISC_PIGSTEP);
+		
+		NamespacedKey key = new NamespacedKey(plugin, "pigstep");
+		
+		ShapedRecipe recipe = new ShapedRecipe(key, item);
+		
+		recipe.shape("PPP", "PJP", "PPP");
+		
+		recipe.setIngredient('P', Material.PORKCHOP);
+		recipe.setIngredient('J', Material.JUKEBOX);
+		
+		return recipe;
+	}
+	
+	private ShapedRecipe ghastTearRecipe() {
+		ItemStack item = new ItemStack(Material.GHAST_TEAR);
+		
+		NamespacedKey key = new NamespacedKey(plugin, "ghast_tear");
+		
+		ShapedRecipe recipe = new ShapedRecipe(key, item);
+		
+		recipe.shape("FFF", "FBF", "FFF");
+		
+		recipe.setIngredient('F', Material.FEATHER);
+		recipe.setIngredient('B', Material.BLAZE_POWDER);
 		
 		return recipe;
 	}
