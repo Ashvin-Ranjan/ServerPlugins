@@ -22,8 +22,7 @@ public class BlockBreakListener implements Listener{
 		Bukkit.getPluginManager().registerEvents(this, plugin);
 	}
 	
-	@EventHandler
-	public void onBlockBreak(BlockBreakEvent e) {
+	private void handlePlanting(BlockBreakEvent e) {
 		Player p = e.getPlayer();
 		if(p.getInventory().getItemInMainHand() == null)
 			return;
@@ -52,6 +51,11 @@ public class BlockBreakListener implements Listener{
 		for (ItemStack drop : e.getBlock().getDrops()) {
 			e.getBlock().getLocation().getWorld().dropItemNaturally(e.getBlock().getLocation(), new ItemStack(drop.getType(), 2));
 		}
-		
+	}
+	
+	@EventHandler
+	public void onBlockBreak(BlockBreakEvent e) {
+		if(plugin.getConfig().getBoolean("planting"))
+			handlePlanting(e);
 	}
 }

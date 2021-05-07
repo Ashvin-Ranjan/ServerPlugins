@@ -13,14 +13,18 @@ public class Main extends JavaPlugin{
 	
 	@Override
 	public void onEnable() {
+		saveDefaultConfig();
+		
 		new EntityDamageByEntityListener(this);
 		new PrepareAnvilListener(this);
 		new BlockBreakListener(this);
 		
 		new EnchantedBooksRecipes(this);
 		
-		CustomEnchants.register(CustomEnchants.ENDER_SLAYER);
-		CustomEnchants.register(CustomEnchants.PLANTING);
+		if(getConfig().getBoolean("enderSlayer"))
+			CustomEnchants.register(CustomEnchants.ENDER_SLAYER);
+		if(getConfig().getBoolean("planting"))
+			CustomEnchants.register(CustomEnchants.PLANTING);
 	}
 	
 }

@@ -6,6 +6,7 @@ import java.util.List;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
+import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.ShapelessRecipe;
 import org.bukkit.inventory.meta.ItemMeta;
@@ -20,44 +21,28 @@ public class EnchantedBooksRecipes {
 	public EnchantedBooksRecipes(Main pl) {
 		this.plugin = pl;
 
-		Bukkit.addRecipe(enderSlayer());
-		Bukkit.addRecipe(planting());
+		if(plugin.getConfig().getBoolean("ender_slayer"))
+			Bukkit.addRecipe(enchantedBookRecipe(CustomEnchants.ENDER_SLAYER, Material.ENDER_PEARL, "ender_slayer"));
+		if(plugin.getConfig().getBoolean("planting"))
+			Bukkit.addRecipe(enchantedBookRecipe(CustomEnchants.PLANTING, Material.HAY_BLOCK, "planting"));
 	}
 	
-	private ShapelessRecipe planting() {
+	@SuppressWarnings("deprecation")
+	private ShapelessRecipe enchantedBookRecipe(Enchantment enchant, Material material, String namespace) {
 		ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
 		ItemMeta meta = item.getItemMeta();
-		meta.addEnchant(CustomEnchants.PLANTING, 1, false);
+		meta.addEnchant(enchant, 1, false);
 		List<String> lore = new ArrayList<String>();
-		lore.add("Planting " + Utils.toRoman(1));
+		lore.add(enchant.getName() + " " + Utils.toRoman(1));
 		meta.setLore(lore);
 		item.setItemMeta(meta);
 		
-		NamespacedKey key = new NamespacedKey(plugin, "planting");
+		NamespacedKey key = new NamespacedKey(plugin, namespace);
 		
 		ShapelessRecipe recipe = new ShapelessRecipe(key, item);
 		
 		recipe.addIngredient(3, Material.PAPER);
-		recipe.addIngredient(1, Material.HAY_BLOCK);
-		
-		return recipe;
-	}
-
-	private ShapelessRecipe enderSlayer() {
-		ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
-		ItemMeta meta = item.getItemMeta();
-		meta.addEnchant(CustomEnchants.ENDER_SLAYER, 1, false);
-		List<String> lore = new ArrayList<String>();
-		lore.add("Ender Slayer " + Utils.toRoman(1));
-		meta.setLore(lore);
-		item.setItemMeta(meta);
-		
-		NamespacedKey key = new NamespacedKey(plugin, "ender_slayer");
-		
-		ShapelessRecipe recipe = new ShapelessRecipe(key, item);
-		
-		recipe.addIngredient(3, Material.PAPER);
-		recipe.addIngredient(1, Material.ENDER_PEARL);
+		recipe.addIngredient(1, material);
 		
 		return recipe;
 	}

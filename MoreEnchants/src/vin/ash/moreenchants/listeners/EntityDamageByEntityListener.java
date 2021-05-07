@@ -19,9 +19,8 @@ public class EntityDamageByEntityListener implements Listener{
 		
 		Bukkit.getPluginManager().registerEvents(this, plugin);
 	}
-	
-	@EventHandler
-	public void onEntityDamageByEntity(EntityDamageByEntityEvent e) {
+
+	private void handleEnderSlayer(EntityDamageByEntityEvent e) {
 		if (e.getDamager().getType() != EntityType.PLAYER)
 			return;
 		Player p = (Player) e.getDamager();
@@ -38,5 +37,11 @@ public class EntityDamageByEntityListener implements Listener{
 		
 		
 		e.setDamage(e.getDamage() + (p.getInventory().getItemInMainHand().getEnchantments().get(CustomEnchants.ENDER_SLAYER) * 2.5));
+	}
+	
+	@EventHandler
+	public void onEntityDamageByEntity(EntityDamageByEntityEvent e) {
+		if(plugin.getConfig().getBoolean("ender_slayer"))
+			handleEnderSlayer(e);
 	}
 }
