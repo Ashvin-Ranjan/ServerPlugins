@@ -1,0 +1,21 @@
+messageJoin_first: '&a<player> &7has joined the server for the first time!'
+messageJoin_default: '&e<player> &7 has joined the server.'
+
+messageTutorial_start: '&oWelcome to your island, this is where you will live for a long time so get comfy, feel free to head over to other playsers islands, everything here is fair game! Do not forget to read your book!'
+
+spawn_spread: 500
+
+unbreakable_file: 'unbreakable'
+spawn_file: 'spawn'
+
+startBook_author: 'Asra_31'
+startBook_title: 'Introduction to Sky Cube!'
+startBook_pages: 'book'
+
+registerMinHeight: false
+minHeight: 4
+
+minDistAway: 10
+
+allowTeleport: true
+allowBack: true

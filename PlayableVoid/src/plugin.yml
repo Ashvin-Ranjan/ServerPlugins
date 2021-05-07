@@ -1,0 +1,7 @@
+name: Playable Void
+main: vin.ash.playableVoid.Main
+author: Asra
+version: 0.1.0
+description: Allows for a void world but somewhat playable
+api-version: 1.16
+api: [4.0.0]

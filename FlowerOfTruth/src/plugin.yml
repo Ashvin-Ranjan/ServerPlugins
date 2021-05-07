@@ -1,0 +1,7 @@
+name: FlowerOfTruth
+main: vin.ash.floweroftruth.Main
+author: Asra
+version: 1.0.2
+description: Makes a flower of truth craft
+api-version: 1.16
+api: [4.0.0]
