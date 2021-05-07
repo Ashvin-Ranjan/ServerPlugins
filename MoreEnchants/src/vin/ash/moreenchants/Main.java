@@ -25,6 +25,8 @@ public class Main extends JavaPlugin{
 			CustomEnchants.register(CustomEnchants.ENDER_SLAYER);
 		if(getConfig().getBoolean("planting"))
 			CustomEnchants.register(CustomEnchants.PLANTING);
+		if(getConfig().getBoolean("cubeism"))
+			CustomEnchants.register(CustomEnchants.CUBEISM);
 	}
 	
 }

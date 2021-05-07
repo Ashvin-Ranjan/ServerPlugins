@@ -3,7 +3,6 @@ package vin.ash.moreenchants.utils;
 import java.util.TreeMap;
 
 import org.bukkit.Material;
-import org.bukkit.block.Block;
 
 public class Utils {
 	
