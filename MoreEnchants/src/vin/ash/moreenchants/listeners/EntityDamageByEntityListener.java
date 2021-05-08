@@ -60,7 +60,7 @@ public class EntityDamageByEntityListener implements Listener{
 	
 	@EventHandler
 	public void onEntityDamageByEntity(EntityDamageByEntityEvent e) {
-		if(plugin.getConfig().getBoolean("ender_slayer"))
+		if(plugin.getConfig().getBoolean("enderSlayer"))
 			handleEnderSlayer(e);
 		if(plugin.getConfig().getBoolean("cubeism"))
 			handleCubeism(e);

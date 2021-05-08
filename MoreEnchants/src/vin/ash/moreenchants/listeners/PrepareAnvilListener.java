@@ -88,7 +88,7 @@ public class PrepareAnvilListener implements Listener{
 			return;
 		if(first.hasItemMeta() && first.getItemMeta().hasEnchant(ench)) 
 			return;
-		if(ench.canEnchantItem(first) || second.getType() != Material.ENCHANTED_BOOK)
+		if(!ench.canEnchantItem(first) || second.getType() != Material.ENCHANTED_BOOK)
 			return;
 		
 		ItemStack out = first.clone();
@@ -105,11 +105,13 @@ public class PrepareAnvilListener implements Listener{
 	
 	@EventHandler
 	public void onPrepareAnvil(PrepareAnvilEvent e) {
-		if(plugin.getConfig().getBoolean("ender_slayer"))
+		if(plugin.getConfig().getBoolean("enderSlayer"))
 			dealWithMultipleLevelEnchant(e, CustomEnchants.ENDER_SLAYER);
 		if(plugin.getConfig().getBoolean("planting"))
 			dealWithSingleLevelEnchant(e, CustomEnchants.PLANTING);
 		if(plugin.getConfig().getBoolean("cubeism"))
 			dealWithMultipleLevelEnchant(e, CustomEnchants.CUBEISM);
+		if(plugin.getConfig().getBoolean("speed"))
+			dealWithMultipleLevelEnchant(e, CustomEnchants.SPEED);
 	}
 }

@@ -11,6 +11,7 @@ public class CustomEnchants {
 	public static final Enchantment ENDER_SLAYER = new EnchantmentWrapper("ender_slayer", "Ender Slayer", 5, EnchantmentTarget.WEAPON, 1);
 	public static final Enchantment PLANTING = new EnchantmentWrapper("planting", "Planting", 1, EnchantmentTarget.TOOL, 1);
 	public static final Enchantment CUBEISM = new EnchantmentWrapper("cubeism", "Cubeism", 5, EnchantmentTarget.WEAPON, 1);
+	public static final Enchantment SPEED = new EnchantmentWrapper("speed", "Speed", 5, EnchantmentTarget.ARMOR_FEET, 1);
 	
 	public static void register(Enchantment e) {
 		boolean registered = Arrays.stream(Enchantment.values()).collect(Collectors.toList()).contains(e);

@@ -21,12 +21,14 @@ public class EnchantedBooksRecipes {
 	public EnchantedBooksRecipes(Main pl) {
 		this.plugin = pl;
 
-		if(plugin.getConfig().getBoolean("ender_slayer"))
+		if(plugin.getConfig().getBoolean("enderSlayer"))
 			Bukkit.addRecipe(enchantedBookRecipe(CustomEnchants.ENDER_SLAYER, Material.ENDER_PEARL, "ender_slayer"));
 		if(plugin.getConfig().getBoolean("planting"))
 			Bukkit.addRecipe(enchantedBookRecipe(CustomEnchants.PLANTING, Material.HAY_BLOCK, "planting"));
 		if(plugin.getConfig().getBoolean("cubeism"))
 			Bukkit.addRecipe(enchantedBookRecipe(CustomEnchants.CUBEISM, Material.CARVED_PUMPKIN, "cubeism"));
+		if(plugin.getConfig().getBoolean("speed"))
+			Bukkit.addRecipe(enchantedBookRecipe(CustomEnchants.SPEED, Material.SUGAR, "speed"));
 	}
 	
 	@SuppressWarnings("deprecation")
