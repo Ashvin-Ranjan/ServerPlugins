@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "moreenchants",
+  "version": "${version}",
+
+  "name": "More Enchants",
+  "description": "Adds more enchants to the game",
+  "authors": [
+    "Asra"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": "https://github.com/Ashvin-Ranjan/ServerPlugins"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/moreenchants/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "vin.ash.moreenchants.MoreEnchantsMod"
+    ]
+  },
+  "mixins": [
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "fabric": "*",
+    "minecraft": "1.16.x"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
