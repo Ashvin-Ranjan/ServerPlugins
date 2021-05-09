@@ -1,7 +1,6 @@
 package vin.ash.moreenchants.listeners;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Set;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -14,7 +13,6 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
 import vin.ash.moreenchants.Main;
-import vin.ash.moreenchants.enchants.CustomEnchants;
 import vin.ash.moreenchants.utils.Utils;
 
 public class PrepareAnvilListener implements Listener{
@@ -27,91 +25,137 @@ public class PrepareAnvilListener implements Listener{
 	}
 	
 	@SuppressWarnings("deprecation")
-	private void dealWithMultipleLevelEnchant(PrepareAnvilEvent e, Enchantment ench) {
-		AnvilInventory inventory = e.getInventory();
-		ItemStack first = inventory.getItem(0);
-		ItemStack second = inventory.getItem(1);
-		
-		if (first == null || second == null)
-			return;
-		if (!first.hasItemMeta() && !second.hasItemMeta())
-			return;
-		if (!second.getItemMeta().hasEnchant(ench))
-			return;
-		
-		if(!first.getItemMeta().hasEnchant(ench)) {
-			if(!ench.canEnchantItem(first) && first.getType() != Material.ENCHANTED_BOOK)
-				return;
-			ItemStack out = first.clone();
-			ItemMeta meta = out.getItemMeta();
-			meta.addEnchant(ench, second.getItemMeta().getEnchantLevel(ench), false);
-			List<String> lore = (meta.getLore() == null ? new ArrayList<String>() : meta.getLore());
-			lore.add(ench.getName() + " " + Utils.toRoman(second.getItemMeta().getEnchantLevel(ench)));
-			meta.setLore(lore);
-			out.setItemMeta(meta);
-			e.setResult(out);
-			plugin.getServer().getScheduler().runTask(plugin, () -> e.getInventory().setRepairCost(second.getItemMeta().getEnchantLevel(ench) * 2));
-			return;
-		}
-		if (first.getItemMeta().getEnchantLevel(ench) != second.getItemMeta().getEnchantLevel(ench))
-			return;
-		if (first.getItemMeta().getEnchantLevel(ench) >= ench.getMaxLevel())
-			return;
-		
-		ItemStack out = first.clone();
-		ItemMeta meta = out.getItemMeta();
-		meta.removeEnchant(ench);
-		meta.addEnchant(ench, second.getItemMeta().getEnchantLevel(ench) + 1, false);
-		List<String> lore = meta.getLore();
-		for(int i = 0; i < lore.size(); i ++) {
-			if(lore.get(i).startsWith(ench.getName() + " ")) {
-				lore.set(i, ench.getName() + " " + Utils.toRoman(second.getItemMeta().getEnchantLevel(ench) + 1));
-			}
-		}
-		meta.setLore(lore);
-		out.setItemMeta(meta);
-		e.setResult(out);
-		plugin.getServer().getScheduler().runTask(plugin, () -> e.getInventory().setRepairCost((second.getItemMeta().getEnchantLevel(ench) + 1) * 2));
-	}
-	
-	@SuppressWarnings("deprecation")
-	public void dealWithSingleLevelEnchant(PrepareAnvilEvent e, Enchantment ench) {
-		AnvilInventory inventory = e.getInventory();
-		ItemStack first = inventory.getItem(0);
-		ItemStack second = inventory.getItem(1);
-		
-		if (first == null || second == null)
-			return;
-		if (!first.hasItemMeta() && !second.hasItemMeta())
-			return;
-		if (!second.getItemMeta().hasEnchant(ench))
-			return;
-		if(first.hasItemMeta() && first.getItemMeta().hasEnchant(ench)) 
-			return;
-		if(!ench.canEnchantItem(first) || second.getType() != Material.ENCHANTED_BOOK)
-			return;
-		
-		ItemStack out = first.clone();
-		ItemMeta meta = out.getItemMeta();
-		meta.addEnchant(ench, 1, false);
-		List<String> lore = (meta.getLore() == null ? new ArrayList<String>() : meta.getLore());
-		lore.add(ench.getName() + " " + Utils.toRoman(second.getItemMeta().getEnchantLevel(ench)));
-		meta.setLore(lore);
-		out.setItemMeta(meta);
-		e.setResult(out);
-		plugin.getServer().getScheduler().runTask(plugin, () -> e.getInventory().setRepairCost(2));
-		return;
-	}
-	
 	@EventHandler
 	public void onPrepareAnvil(PrepareAnvilEvent e) {
-		if(plugin.getConfig().getBoolean("enderSlayer"))
-			dealWithMultipleLevelEnchant(e, CustomEnchants.ENDER_SLAYER);
-		if(plugin.getConfig().getBoolean("planting"))
-			dealWithSingleLevelEnchant(e, CustomEnchants.PLANTING);
-		if(plugin.getConfig().getBoolean("cubeism"))
-			dealWithMultipleLevelEnchant(e, CustomEnchants.CUBEISM);
-		if(plugin.getConfig().getBoolean("speed"))
-			dealWithMultipleLevelEnchant(e, CustomEnchants.SPEED);
+		AnvilInventory inventory = e.getInventory();
+		ItemStack first = inventory.getItem(0);
+		ItemStack second = inventory.getItem(1);
+		
+		if(first == null)
+			return;
+		if(second == null) {
+			if (!first.hasItemMeta())
+				return;
+			if (e.getResult() == null)
+				return;
+			if (first.getItemMeta().getEnchants().keySet().size() == 0)
+				return;
+			
+			ItemStack out = first.clone();
+			ItemMeta meta = out.getItemMeta();
+			meta.setDisplayName(e.getResult().getItemMeta().getDisplayName());
+			out.setItemMeta(meta);
+			e.setResult(out);
+			plugin.getServer().getScheduler().runTask(plugin, () -> e.getInventory().setRepairCost(1));
+			return;
+		}
+		
+		if (e.getResult() != null) {
+			if (!first.hasItemMeta()) {
+				if(!second.hasItemMeta())
+					return;
+				ItemStack out = e.getResult().clone();
+				ItemMeta meta = second.getItemMeta().clone();
+				meta.setDisplayName(e.getResult().getItemMeta().getDisplayName());
+				out.setItemMeta(meta);
+				e.setResult(out);
+				plugin.getServer().getScheduler().runTask(plugin, () -> e.getInventory().setRepairCost(second.getEnchantments().size() * 2));
+				return;
+			}
+			
+			if (!second.hasItemMeta()) {
+				ItemStack out = e.getResult().clone();
+				ItemMeta meta = first.getItemMeta().clone();
+				meta.setDisplayName(e.getResult().getItemMeta().getDisplayName());
+				out.setItemMeta(meta);
+				e.setResult(out);
+				plugin.getServer().getScheduler().runTask(plugin, () -> e.getInventory().setRepairCost(first.getEnchantments().size() * 2));
+				return;
+			}
+			
+			Set<Enchantment> enchants = first.getItemMeta().getEnchants().keySet();
+			enchants.addAll(second.getItemMeta().getEnchants().keySet());
+			ItemStack out = e.getResult().clone();
+			ItemMeta meta = e.getResult().getItemMeta().clone();
+			meta.setDisplayName(e.getResult().getItemMeta().getDisplayName());
+			
+			for (Enchantment ench : enchants) {
+				if(!ench.canEnchantItem(e.getResult()))
+					return;
+				if(!e.getResult().getItemMeta().hasEnchant(ench)) {
+					if(first.getItemMeta().hasEnchant(ench) && first.getItemMeta().hasEnchant(ench)) {
+						if(first.getItemMeta().getEnchantLevel(ench) != second.getItemMeta().getEnchantLevel(ench))
+							return;
+						
+						meta.addEnchant(ench, (first.getItemMeta().getEnchantLevel(ench) + 1 > ench.getMaxLevel() ? ench.getMaxLevel() : first.getItemMeta().getEnchantLevel(ench) + 1), false);
+						meta.getLore().add(ench.getName() + " " + Utils.toRoman((first.getItemMeta().getEnchantLevel(ench) + 1 > ench.getMaxLevel() ? ench.getMaxLevel() : first.getItemMeta().getEnchantLevel(ench) + 1)));
+					}
+					
+					meta.addEnchant(ench, first.getItemMeta().getEnchantLevel(ench), false);
+					meta.getLore().add(ench.getName() + " " + Utils.toRoman(first.getItemMeta().getEnchantLevel(ench)));
+				}
+			}
+			out.setItemMeta(meta);
+			e.setResult(out);
+			plugin.getServer().getScheduler().runTask(plugin, () -> e.getInventory().setRepairCost(out.getEnchantments().size() * 2));
+			return;
+		}
+		
+		if (second.getType() != Material.ENCHANTED_BOOK && first.getType() != second.getType())
+			return;
+		
+		if (!first.hasItemMeta()) {
+			if (!second.hasItemMeta())
+				return;
+			for (Enchantment ench : second.getItemMeta().getEnchants().keySet()) {
+				if (!ench.canEnchantItem(first))
+					return;
+			}
+			
+
+			ItemStack out = first.clone();
+			ItemMeta meta = second.getItemMeta().clone();
+			out.setItemMeta(meta);
+			e.setResult(out);
+			plugin.getServer().getScheduler().runTask(plugin, () -> e.getInventory().setRepairCost(second.getEnchantments().size() * 2));
+			return;
+		}
+		
+		if (!second.hasItemMeta()) {
+			ItemStack out = first.clone();
+			ItemMeta meta = first.getItemMeta().clone();
+			out.setItemMeta(meta);
+			e.setResult(out);
+			plugin.getServer().getScheduler().runTask(plugin, () -> e.getInventory().setRepairCost(first.getEnchantments().size() * 2));
+			return;
+		}
+		
+		Set<Enchantment> enchants = first.getItemMeta().getEnchants().keySet();
+		enchants.addAll(second.getItemMeta().getEnchants().keySet());
+		ItemStack out = new ItemStack(first.getType(), first.getAmount());
+		ItemMeta meta = first.getItemMeta().clone();
+		
+		for (Enchantment ench : enchants) {
+			if(!ench.canEnchantItem(out))
+				return;
+			if(!out.getItemMeta().hasEnchant(ench)) {
+				if(first.getItemMeta().hasEnchant(ench) && first.getItemMeta().hasEnchant(ench)) {
+					if(first.getItemMeta().getEnchantLevel(ench) != second.getItemMeta().getEnchantLevel(ench))
+						return;
+					
+					meta.addEnchant(ench, (first.getItemMeta().getEnchantLevel(ench) + 1 > ench.getMaxLevel() ? ench.getMaxLevel() : first.getItemMeta().getEnchantLevel(ench) + 1), false);
+					meta.getLore().add(ench.getName() + " " + Utils.toRoman((first.getItemMeta().getEnchantLevel(ench) + 1 > ench.getMaxLevel() ? ench.getMaxLevel() : first.getItemMeta().getEnchantLevel(ench) + 1)));
+				}
+				
+				meta.addEnchant(ench, first.getItemMeta().getEnchantLevel(ench), false);
+				meta.getLore().add(ench.getName() + " " + Utils.toRoman(first.getItemMeta().getEnchantLevel(ench)));
+			}
+		}
+		out.setItemMeta(meta);
+		e.setResult(out);
+		plugin.getServer().getScheduler().runTask(plugin, () -> e.getInventory().setRepairCost(out.getEnchantments().size() * 2));
+		return;
+		
+		
 	}
 }

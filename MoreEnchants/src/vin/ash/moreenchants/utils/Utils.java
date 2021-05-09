@@ -34,14 +34,6 @@ public class Utils {
         return map.get(l) + toRoman(number-l);
     }
     
-    public static boolean isSword(Material m) {
-    	return m == Material.WOODEN_SWORD || m == Material.STONE_SWORD || m == Material.IRON_SWORD || m == Material.GOLDEN_SWORD || m == Material.DIAMOND_SWORD || m == Material.NETHERITE_SWORD;
-    }
-    
-    public static boolean isHoe(Material m) {
-    	return m == Material.WOODEN_HOE || m == Material.STONE_HOE || m == Material.IRON_HOE || m == Material.GOLDEN_HOE || m == Material.DIAMOND_HOE || m == Material.NETHERITE_HOE;
-    }
-    
     public static boolean isPlant(Material m) {
     	return m == Material.WHEAT || m == Material.POTATOES || m == Material.BEETROOTS || m == Material.CARROTS || m == Material.NETHER_WART;
     }

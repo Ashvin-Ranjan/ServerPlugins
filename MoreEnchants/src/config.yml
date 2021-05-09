@@ -2,7 +2,11 @@ enderSlayer: true
 planting: true
 cubeism: true
 speed: true
+glowing: true
+fireFist: true
 
+
+# DO NOT CHANGE
 blocked:
     - FURNACE
     - CHEST

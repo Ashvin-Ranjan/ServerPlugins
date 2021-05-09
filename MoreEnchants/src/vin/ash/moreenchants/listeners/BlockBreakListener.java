@@ -30,7 +30,7 @@ public class BlockBreakListener implements Listener{
 			return;
 		if(!p.getInventory().getItemInMainHand().getItemMeta().hasEnchant(CustomEnchants.PLANTING))
 			return;
-		if(!Utils.isHoe(p.getInventory().getItemInMainHand().getType()))
+		if(!CustomEnchants.PLANTING.canEnchantItem(p.getInventory().getItemInMainHand()))
 			return;
 		if(!Utils.isPlant(e.getBlock().getType()))
 			return;

@@ -29,6 +29,10 @@ public class EnchantedBooksRecipes {
 			Bukkit.addRecipe(enchantedBookRecipe(CustomEnchants.CUBEISM, Material.CARVED_PUMPKIN, "cubeism"));
 		if(plugin.getConfig().getBoolean("speed"))
 			Bukkit.addRecipe(enchantedBookRecipe(CustomEnchants.SPEED, Material.SUGAR, "speed"));
+		if(plugin.getConfig().getBoolean("glowing"))
+			Bukkit.addRecipe(enchantedBookRecipe(CustomEnchants.GLOWING, Material.GLOWSTONE, "glowing"));
+		if(plugin.getConfig().getBoolean("fireFist"))
+			Bukkit.addRecipe(enchantedBookRecipe(CustomEnchants.FIRE_FIST, Material.FLINT_AND_STEEL, "fire_fist"));
 	}
 	
 	@SuppressWarnings("deprecation")
